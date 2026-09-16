@@ -3,14 +3,14 @@
 **Projeto:** COGME — Conversor de Ganhos em Moeda Estrangeira
 **Data de Emissão:** 10/09/2026
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto
 **Referência:** `analise_auditoria_1.0.md` (revisado) + OKB v3.0 + TAP v1_opngoing + hardware.md
 **Status:** Input para ADR-001, ADR-002, ADR-003, ADR-004 + Plano de Ação 10-19/09
 
 **Notas**:
 
 1. Data de entrega parcial alterada (extendida): 22/09/2026 às 9:00AM impreterivelmente - Aplicar esta mudança em todo o contexto deste relatório atualizando todas as referências à data 19/09/2026 para a nova data 22/09/2026 9:00AM
-2. Todas as menções ao Prof Nivaldo devem ter sua nomenclatura alterada para Profº Dr. Nivaldo Carletto em forma de prestar respeito e formalidade
+2. Todas as menções ao Prof Nivaldo devem ter sua nomenclatura alterada para Profº Dr. Nivaldo Carleto em forma de prestar respeito e formalidade
 
 ---
 
@@ -58,7 +58,7 @@ A revisão do relatório v1.0 introduziu **7 notas de ajuste** que alteram signi
 
 - **OKB v3.0 §4.4** já havia absorvido a dimensão PDCA nas Dimensões 1 e 2 (Compliance + Valor Funcional). A nota **reintroduz PDCA explícito** como artefato obrigatório.
 - **Trade-off:** Aumenta volume documental, mas atende a exigência acadêmica explícita. -> Tradeoff aceito - Este é um artefato inegociável
-- **Mitigação KISS:** PDCA não precisa ser documento separado — pode ser **seção dentro de cada plano** (ex: "§X.X PDCA do Plano de Escopo"). - O artefato não deve ser separado, mas deve estar reunido sob o tópico/item/plano de projeto (área de conhecimento) 5 Gerenciamento da Qualidade, e não em cada plano. (Devo confirmar se a sugestão é cabível e aceita pelo Profº Dr. Nivaldo Carletto conforme formalização documental) -> Em análise (Componha doi blocos para cada modelo (A sugestão KISS e a que estou assumindo temporáriamente como correta - a confirmar - assim manteremos o tracking de decisões.))
+- **Mitigação KISS:** PDCA não precisa ser documento separado — pode ser **seção dentro de cada plano** (ex: "§X.X PDCA do Plano de Escopo"). - O artefato não deve ser separado, mas deve estar reunido sob o tópico/item/plano de projeto (área de conhecimento) 5 Gerenciamento da Qualidade, e não em cada plano. (Devo confirmar se a sugestão é cabível e aceita pelo Profº Dr. Nivaldo Carleto conforme formalização documental) -> Em análise (Componha doi blocos para cada modelo (A sugestão KISS e a que estou assumindo temporáriamente como correta - a confirmar - assim manteremos o tracking de decisões.))
 
 **Modelo de PDCA recomendado (KISS):**
 
@@ -267,7 +267,7 @@ Para cada plano, incluir seção PDCA conforme modelo da Seção 1.2. Exemplo pa
 
 - ✅ Alinha ao Domínio de Medição PMBOK 7ª (GitHub Insights)
 - ✅ Reduz burocracia (sem relatórios estáticos duplicados)
-- ⚠️ Risco: Prof. Nivaldo pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban - Isto já é ponto Pacificado, o Prof Dr. Nivaldo Carletto declarou preferência por não Gannt, apesar de não restringir seu uso. Esqueça Gantt e adote a opção mais moderna e apenas isso.
+- ⚠️ Risco: Prof. Nivaldo pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban - Isto já é ponto Pacificado, o Prof Dr. Nivaldo Carleto declarou preferência por não Gannt, apesar de não restringir seu uso. Esqueça Gantt e adote a opção mais moderna e apenas isso.
 
 ### 4.2. ADR-002 — Stack FOSS (11/09)
 
