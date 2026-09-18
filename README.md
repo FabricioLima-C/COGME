@@ -423,7 +423,7 @@ make up
 
 ## 🤝 Contribuições
 
-Este é um projeto acadêmico com equipe de 2 pessoas. Contribuições externas são bem-vindas via Issues, mas mudanças de escopo devem passar pelo **CCB (Change Control Board)** — representado pelo Prof. Dr. Nivaldo Carletto.
+Este é um projeto acadêmico com equipe de 3 pessoas. Contribuições externas são bem-vindas via Issues, mas mudanças de escopo devem passar pelo **CCB (Change Control Board)** — representado pelo Prof. Dr. Nivaldo Carletto.
 
 Para reportar bugs ou sugerir melhorias, abra uma Issue seguindo o template disponível.
 
