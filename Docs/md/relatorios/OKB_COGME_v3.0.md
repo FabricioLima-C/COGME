@@ -4,7 +4,7 @@
 **Data de Emissão:** 09/09/2026
 **Versão anterior:** OKB_COGME_v2.1 (07/09/2026)
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder:** Prof. Dr. Nivaldo Carletto
+**Stakeholder:** Prof. Dr. Nivaldo Carleto
 
 ---
 

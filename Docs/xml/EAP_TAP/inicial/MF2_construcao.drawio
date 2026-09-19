@@ -100,7 +100,7 @@
         <mxCell id="N11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ED7D31;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" value="N11: Gestão de Mudanças" vertex="1">
           <mxGeometry height="50" width="240" x="320" y="569" as="geometry" />
         </mxCell>
-        <mxCell id="N11.1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCE4D6;fontColor=#000000;fontSize=10;" value="N11.1: CCB — Prof. Dr. Nivaldo Carletto" vertex="1">
+        <mxCell id="N11.1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCE4D6;fontColor=#000000;fontSize=10;" value="N11.1: CCB — Prof. Dr. Nivaldo Carleto" vertex="1">
           <mxGeometry height="40" width="240" x="320" y="655" as="geometry" />
         </mxCell>
         <mxCell id="N11.2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCE4D6;fontColor=#000000;fontSize=10;" value="N11.2: Registro de Solicitações de Mudança" vertex="1">

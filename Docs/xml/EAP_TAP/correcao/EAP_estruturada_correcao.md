@@ -8,11 +8,11 @@
 
 ## 1. CORREÇÃO DE ENTENDIMENTO — AUTORIA DOS COMENTÁRIOS
 
-✅ **Reconhecido e registrado**: Os comentários inseridos no documento TAP são **decisões estratégicas dos alunos** (Leonardo David Silva Setti e Fabricio de Lima Cabral), não orientações do Prof. Dr. Nivaldo Carletto.
+✅ **Reconhecido e registrado**: Os comentários inseridos no documento TAP são **decisões estratégicas dos alunos** (Leonardo David Silva Setti e Fabricio de Lima Cabral), não orientações do Prof. Dr. Nivaldo Carleto.
 
 **Fundamentação**: Conforme OKB_COGME_v3.0 §3.1 (Hierarquia de Resolução de Conflitos), os alunos possuem autonomia para tomar decisões durante o desenvolvimento do projeto, desde que alinhadas aos princípios constitutivos (P1-P9) e ao guardrail operacional.
 
-**Ciclo de avaliação do Prof. Dr. Nivaldo Carletto**:
+**Ciclo de avaliação do Prof. Dr. Nivaldo Carleto**:
 - **Entrega Parcial**: 22/09/2026 (documentação das áreas 1-5 do PMBOK 6ª)
 - **Entrega Final**: Novembro/Dezembro 2026 (MVP funcional + documentação consolidada)
 
@@ -234,7 +234,7 @@ Após a inserção da seção §4 (EAP v2.0), prosseguir com as seções pendent
 | 🟢 P3 | §1, §2, §3, §8 | Revisões textuais + reescrever item 1.c (hierarquia PMBOK 7ª → 6ª) | 11/09 |
 | 🟢 P3 | Global | Remover comentários de revisão + padronização textual | 11/09 |
 
-**Marco de submissão**: TAP v1.1 completo até 22/09/2026, 09:00 para submissão ao Prof. Dr. Nivaldo Carletto.
+**Marco de submissão**: TAP v1.1 completo até 22/09/2026, 09:00 para submissão ao Prof. Dr. Nivaldo Carleto.
 
 ---
 

@@ -4,7 +4,7 @@
 **Data:** 10/09/2026
 **Documento avaliado:** `Termo de Abertura do Projeto v1_opngoing.docx`
 **Referências normativas:** OKB_COGME_v3.1 + Análise Arquitetural v2.0 + PMBOK 7ª (Domínios) + PMBOK 6ª §4.1 (dicionário)
-**Stakeholder-avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-avaliador:** Prof. Dr. Nivaldo Carleto
 
 ---
 
@@ -12,7 +12,7 @@
 
 **Status do TAP v1: 🔴 NÃO APROVÁVEL na forma atual**
 
-O documento apresenta **7 inconsistências estruturais críticas** que impedem submissão ao Prof. Dr. Nivaldo Carletto. A versão atual reflete o estado pré-OKB v3.1 (09/09/2026) e não incorporou as 6 correções da Análise Arquitetural v2.0. O scorecard de aceite é **4.8/10** — abaixo do limiar de 7.0 para submissão.
+O documento apresenta **7 inconsistências estruturais críticas** que impedem submissão ao Prof. Dr. Nivaldo Carleto. A versão atual reflete o estado pré-OKB v3.1 (09/09/2026) e não incorporou as 6 correções da Análise Arquitetural v2.0. O scorecard de aceite é **4.8/10** — abaixo do limiar de 7.0 para submissão.
 
 **Scorecard de Aceite:**
 
@@ -41,7 +41,7 @@ O documento apresenta **7 inconsistências estruturais críticas** que impedem s
 | M4 | **Incluir 10 Declarações de Governança obrigatórias** | OKB v3.1 §8 — guardrail inegociável | Nova seção §11 |
 | M5 | **Remover referências a Redis** | Stack canônica v2.0 §4.2 usa SQLite 3; Redis é YAGNI | Alinhamento técnico |
 | M6 | **Substituir EVM/Burndown por métricas de fluxo Kanban** | OKB v3.1 §3.4 — GitHub Insights é SSOT | Domínio de Medição PMBOK 7ª |
-| M7 | **Corrigir nomes próprios e institucionais** | Credibilidade acadêmica | "Carletto" (não Carleto); "Fatec Taquaritinga" (não Marlene Maria Miletta Servidoni) |
+| M7 | **Corrigir nomes próprios e institucionais** | Credibilidade acadêmica | "Carleto" (não Carleto); "Fatec Taquaritinga" (não Marlene Maria Miletta Servidoni) |
 
 ### 2.2. Mudanças Estruturais (Severidade 🟠 ALTA)
 
@@ -94,7 +94,7 @@ O documento apresenta **7 inconsistências estruturais críticas** que impedem s
 - Resolver 7 falhas críticas (C4, C5, C9, C10, C11, C12, C13)
 - Resolver 2 falhas parciais (C6, C7)
 - Elevar scorecard para ≥ 7.0/10
-- Submeter TAP v1.0 ao Prof. Dr. Nivaldo Carletto até **11/09/2026, 23:59**
+- Submeter TAP v1.0 ao Prof. Dr. Nivaldo Carleto até **11/09/2026, 23:59**
 
 **Risco de reprovação acadêmica:** 85% se submetido hoje sem correções.
 
@@ -114,7 +114,7 @@ A estrutura atual do TAP v1 contém **11 seções numeradas**. A proposta de nor
 | **4** | ESTRUTURA ANALÍTICA DO PROJETO (EAP/WBS) | 🔴 **P0** | 🔴 Inconsistente | Reestruturar: remover N1.1; remover fases 14-17; reduzir para 48 pacotes | EAP v1.0 (13 fases + 48 pacotes) |
 | **5** | Principais requisitos das entregas | 🔴 **P0** | 🔴 VAZIA | Redigir tabela com 5 entregas + requisitos + critérios | Tabela completa |
 | **6** | Marcos | 🟠 P1 | ⚠️ Parcial | Preencher datas; resolver comentário do Leonardo | Datas concretas |
-| **7** | Partes interessadas | 🟠 P1 | ⚠️ Parcial | Corrigir nomes (Carletto, Silva, Fatec Taquaritinga) | Zero erros |
+| **7** | Partes interessadas | 🟠 P1 | ⚠️ Parcial | Corrigir nomes (Carleto, Silva, Fatec Taquaritinga) | Zero erros |
 | **8** | Restrições | 🟢 P3 | ✅ OK | Nenhuma | Manter |
 | **9** | Premissas | 🔴 **P0** | 🔴 VAZIA | Redigir 8 premissas fundamentais (OKB v3.1 §9) | 8 premissas numeradas |
 | **10** | Riscos | 🔴 **P0** | 🔴 VAZIA | Redigir Top 5 riscos com prob./impacto/resposta | 5 riscos com resposta |
@@ -193,7 +193,7 @@ A estrutura atual do TAP v1 contém **11 seções numeradas**. A proposta de nor
 | 11/09 10:00-12:00 | Preencher marcos + corrigir stakeholders + aprovações | GP | TAP v1.0 |
 | 11/09 13:00-15:00 | Reescrever item 1.c + correções cosméticas | GP | TAP v1.0 |
 | 11/09 15:00-17:00 | Revisão cruzada (Persona Revisora OKB v2.1 §10) | Revisor | Checklist |
-| 11/09 19:00 | Submissão ao Prof. Dr. Nivaldo Carletto | GP | Issue no GitHub |
+| 11/09 19:00 | Submissão ao Prof. Dr. Nivaldo Carleto | GP | Issue no GitHub |
 
 ---
 
@@ -201,7 +201,7 @@ A estrutura atual do TAP v1 contém **11 seções numeradas**. A proposta de nor
 
 **Decisão recomendada:** elevar o TAP à versão **v1.0** até **11/09/2026, 23:59**, incorporando as **17 mudanças** identificadas neste relatório, com foco nas **6 mudanças bloqueantes (M1-M6)** e nas **6 seções P0 (§4, §5, §9, §10, §11, §12)**.
 
-**Condição de sucesso:** TAP v1.0 aprovado pelo Prof. Dr. Nivaldo Carletto até 13/09/2026, permitindo transição para MF2 (Construção) em 01/10/2026 sem atraso.
+**Condição de sucesso:** TAP v1.0 aprovado pelo Prof. Dr. Nivaldo Carleto até 13/09/2026, permitindo transição para MF2 (Construção) em 01/10/2026 sem atraso.
 
 **Escalamento:** caso o Prof. Nivaldo não valide até 13/09, acionar gatilho de reavaliação do OKB v3.1 §11.2 (mudança no critério de avaliação).
 

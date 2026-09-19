@@ -79,11 +79,11 @@ A Estrutura Analítica do Projeto (EAP) representa a decomposição hierárquica
 |               |                                         | N8.2        | 8.2. Documentação de Deploy + Rollback          | MF2        |
 | **N9**  | **9. Comunicação**              | N9.1        | 9.1. Matriz de Comunicação (RACI)               | MF1        |
 |               |                                         | N9.2        | 9.2. Canais Oficiais (GitHub, e-mail)             | MF1        |
-|               |                                         | N9.4        | 9.4. Cerimônias com Prof. Dr. Nivaldo Carletto   | MF1        |
+|               |                                         | N9.4        | 9.4. Cerimônias com Prof. Dr. Nivaldo Carleto   | MF1        |
 | **N10** | **10. Base de Conhecimento**      | N10.1       | 10.1. ADRs (decisões arquiteturais)              | MF1        |
 |               |                                         | N10.2       | 10.2. Lições Aprendidas Contínuas              | MF1        |
 |               |                                         | N10.3       | 10.3. Catálogo de Prompts SDD                    | MF1        |
-| **N11** | **11. Gestão de Mudanças**      | N11.1       | 11.1. CCB — Prof. Dr. Nivaldo Carletto           | MF2        |
+| **N11** | **11. Gestão de Mudanças**      | N11.1       | 11.1. CCB — Prof. Dr. Nivaldo Carleto           | MF2        |
 |               |                                         | N11.2       | 11.2. Registro de Solicitações de Mudança      | MF2        |
 |               |                                         | N11.3       | 11.3. Label`change-request` no GitHub           | MF2        |
 |               |                                         | N11.4       | 11.4. Aprovação e Versionamento                 | MF2        |
@@ -146,7 +146,7 @@ N0: Projeto COGME — Conversor de Ganhos em Moeda Estrangeira
 ├── N9: 9. Comunicação [MF1]
 │   ├── N9.1: 9.1. Matriz de Comunicação (RACI)
 │   ├── N9.2: 9.2. Canais Oficiais (GitHub, e-mail)
-│   └── N9.4: 9.4. Cerimônias com Prof. Dr. Nivaldo Carletto
+│   └── N9.4: 9.4. Cerimônias com Prof. Dr. Nivaldo Carleto
 │
 ├── N10: 10. Base de Conhecimento [MF1]
 │   ├── N10.1: 10.1. ADRs (decisões arquiteturais)
@@ -154,7 +154,7 @@ N0: Projeto COGME — Conversor de Ganhos em Moeda Estrangeira
 │   └── N10.3: 10.3. Catálogo de Prompts SDD
 │
 ├── N11: 11. Gestão de Mudanças [MF2]
-│   ├── N11.1: 11.1. CCB — Prof. Dr. Nivaldo Carletto
+│   ├── N11.1: 11.1. CCB — Prof. Dr. Nivaldo Carleto
 │   ├── N11.2: 11.2. Registro de Solicitações de Mudança
 │   ├── N11.3: 11.3. Label `change-request` no GitHub
 │   └── N11.4: 11.4. Aprovação e Versionamento
