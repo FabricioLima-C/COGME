@@ -3,7 +3,7 @@
 **Projeto:** COGME — Conversor de Ganhos em Moeda Estrangeira
 **Data de Emissão:** 10/09/2026
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto
 **Referências:** `analise_auditoria_1.3.md` + `Relatorio_Canônico_Stack_SDD_Local.md` + `OKB_COGME_v3.0` + `TAP_EAP.md` + `hardware.md`
 **Status:** Decisão Arquitetural Consolidada — input para OKB v3.1 + ADR-002/004 finais + Plano de Ação 10-22/09
 
@@ -63,7 +63,7 @@ A rodada v2.0 introduz **6 correções estruturais críticas** que redefinem a a
 - Lista passa de 13 para **12 PDCAs** (N1.2 a N4.4).
 
 **Teste GMV:**
-- P1 (Prof. Dr. Nivaldo Carletto exigirá?): ✅ SIM — correção conceitual acadêmica
+- P1 (Prof. Dr. Nivaldo Carleto exigirá?): ✅ SIM — correção conceitual acadêmica
 - P2 (Evita retrabalho?): ✅ SIM — blinda contra questionamento da banca
 - P3 (PMBOK 7ª exige?): ✅ SIM — Domínio de Integração
 - P4 (Útil para equipe?): ✅ SIM — clareza ontológica
@@ -152,7 +152,7 @@ ATIVIDADES (AÇÕES / VERBOS)
 | Pacote EAP | Atividades Derivadas (exemplo) |
 |---|---|
 | N1.2 Identificação de Stakeholders | A1.2.1: Listar stakeholders; A1.2.2: Classificar poder/interesse; A1.2.3: Documentar matriz |
-| N2.1 Requisitos Funcionais | A2.1.1: Entrevistar Prof. Dr. Nivaldo Carletto; A2.1.2: Redigir user stories; A2.1.3: Validar com stakeholder |
+| N2.1 Requisitos Funcionais | A2.1.1: Entrevistar Prof. Dr. Nivaldo Carleto; A2.1.2: Redigir user stories; A2.1.3: Validar com stakeholder |
 | N4.1 Seleção da Stack FOSS | A4.1.1: Pesquisar candidatos; A4.1.2: Aplicar critérios GMV; A4.1.3: Redigir ADR-002; A4.1.4: Validar com protótipo |
 
 **Domínio PMBOK 7ª associado:** Domínio de Planejamento (decomposição de escopo em trabalho executável).
@@ -406,7 +406,7 @@ llama-server \
 | **P4** | Uso de LLM é irrestrito e autorizado | OKB v3.0 §4.8 |
 | **P5** | Código-fonte (MVP full-stack) é deliverable formal | TAP §3 |
 | **P6** | Equipe de 2 pessoas com carga ≤ 20h/semana cada | PMBOK 7ª Domínio de Equipe |
-| **P7** | Prof. Dr. Nivaldo Carletto é stakeholder único formal | TAP §1 |
+| **P7** | Prof. Dr. Nivaldo Carleto é stakeholder único formal | TAP §1 |
 | **P8** | Hardware local (AMD Ryzen 7 8700G, 58GB RAM, Arch Linux) é suficiente para SDD local | hardware.md + Relatório Canônico |
 
 ---
@@ -434,7 +434,7 @@ llama-server \
 | **17/09 (qua)** | Plano de Cronograma v1.0 (+ Roadmap 2 marcos) | GP | `docs/planos/03-cronograma.md` | Roadmap M1 (22/09) + M2 (Nov/Dez) |
 | **18/09 (qui)** | Plano de Custos v1.0 (simplificado) | GP | `docs/planos/04-custos.md` | 1-2 páginas, foco em premissas |
 | **19/09 (sex)** | Plano de Qualidade v1.0 (+ DoD/DoR + Ishikawa + 12 PDCAs consolidados) | GP | `docs/planos/05-qualidade.md` | DoD/DoR + Ishikawa 6M + 12 PDCAs |
-| **22/09 (ter, 09:00)** | Revisão final + submissão ao Prof. Dr. Nivaldo Carletto | GP | Issue no GitHub | Zero achados CRÍTICOS no checklist |
+| **22/09 (ter, 09:00)** | Revisão final + submissão ao Prof. Dr. Nivaldo Carleto | GP | Issue no GitHub | Zero achados CRÍTICOS no checklist |
 
 ---
 
@@ -449,7 +449,7 @@ llama-server \
 **Consequências:**
 - ✅ Alinha ao Domínio de Medição PMBOK 7ª (GitHub Insights)
 - ✅ Reduz burocracia (sem relatórios estáticos duplicados)
-- ⚠️ Risco: Prof. Dr. Nivaldo Carletto pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban
+- ⚠️ Risco: Prof. Dr. Nivaldo Carleto pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban
 
 ### 7.2. ADR-002 — Stack FOSS + SDD Local Canônica (11/09)
 
@@ -511,7 +511,7 @@ llama-server \
 | R-01 | Stack FOSS indefinida | 80% | Alto | Crítico | ADR-002 até 11/09 | 🟠 Aberto |
 | R-02 | EAP não sincronizada com GitHub | 60% | Alto | Alto | Mapeamento 1:1 até 15/09 | 🟡 Em andamento |
 | R-03 | Governança > 50% do tempo | 70% | Médio | Alto | Aplicar GMV | 🟡 Aberto |
-| R-04 | Prof. Dr. Nivaldo Carletto exigir Gantt tradicional | 30% | Médio | Médio | ADR-001 + Gantt derivado | 🟢 Mitigado |
+| R-04 | Prof. Dr. Nivaldo Carleto exigir Gantt tradicional | 30% | Médio | Médio | ADR-001 + Gantt derivado | 🟢 Mitigado |
 | R-05 | Scope creep | 50% | Alto | Alto | CCB + DoR rigoroso | 🟡 Monitorando |
 | R-08 | Equipe exceder 20h/semana (burnout) | 50% | Médio | Alto | WIP limits + métrica de burnout | 🟡 Monitorando |
 | R-09 | Entrega parcial 22/09 não concluída | **15%** | Alto | Alto | Plano de ação 10-22/09 + folga 28% | 🟢 Mitigado |
@@ -537,9 +537,9 @@ llama-server \
 | 9 | Plano de Qualidade v1.0 (+ DoD/DoR + Ishikawa + 12 PDCAs) | GP | 19/09 | `docs/planos/05-qualidade.md` |
 | 10 | Diagrama de Ishikawa (6M) para problema central | GP | 19/09 | Seção §5.5 do Plano de Qualidade |
 | 11 | 12 PDCAs consolidados (sem TAP) | GP | 19/09 | Seção §5.6 do Plano de Qualidade |
-| 12 | Padronização do nome "Prof. Dr. Nivaldo Carletto" | GP | 19/09 | Busca e substituição global |
+| 12 | Padronização do nome "Prof. Dr. Nivaldo Carleto" | GP | 19/09 | Busca e substituição global |
 | 13 | Eliminação do termo "ADER" | GP | 19/09 | Busca e substituição global |
-| 14 | Revisão final + submissão ao Prof. Dr. Nivaldo Carletto | GP | **22/09, 09:00** | Issue no GitHub |
+| 14 | Revisão final + submissão ao Prof. Dr. Nivaldo Carleto | GP | **22/09, 09:00** | Issue no GitHub |
 | 15 | Redigir ADR-004 (Separação TAP ≠ EAP ≠ PDCA) | GP | 30/09 | `docs/adr/ADR-004.md` |
 
 ---
@@ -559,7 +559,7 @@ Este relatório v2.0:
 - ✅ **Deriva atividades da EAP via decomposição** (PMBOK 6ª §6.2) (Mudança 4)
 - ✅ **TAP sem invadir escopo gerencial** (padrão PMO) (Mudança 5)
 - ✅ **Hardware real = 58GB RAM** (não 60GB nominais) (Mudança 6)
-- ✅ Padroniza o nome do stakeholder como "Prof. Dr. Nivaldo Carletto"
+- ✅ Padroniza o nome do stakeholder como "Prof. Dr. Nivaldo Carleto"
 - ✅ Elimina definitivamente o termo "ADER"
 
 ---
@@ -570,7 +570,7 @@ Este relatório v2.0:
 2. **Iniciar ação #1** (TAP v1.0 sem N1.1) imediatamente (10/09)
 3. **Formalizar ADR-001, ADR-002 e ADR-003** até 11/09
 4. **Redigir Plano de Qualidade v1.0 com Ishikawa + 12 PDCAs consolidados** até 19/09
-5. **Submeter ao Prof. Dr. Nivaldo Carletto** em 22/09/2026, 09:00 via Issue no GitHub
+5. **Submeter ao Prof. Dr. Nivaldo Carleto** em 22/09/2026, 09:00 via Issue no GitHub
 6. **Produzir OKB_COGME v3.1** incorporando todas as mudanças v2.0 (entrega paralela)
 7. **Próxima revisão:** 30/09/2026 (fechamento da MF1 — Fundação)
 
@@ -589,7 +589,7 @@ Aguardo autorização para iniciar a execução do plano de ação 10-22/09/2026
 **Data de Emissão:** 10/09/2026
 **Versão anterior:** OKB_COGME_v3.0 (09/09/2026)
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto
 **Status:** Pronto para aplicação imediata
 
 ---
@@ -620,7 +620,7 @@ Esta versão **não revisita debates encerrados** (hibridização, exclusão de 
 | **P5** | ACID e Clean Code como padrão | Restrição técnica inegociável |
 | **P6** | **Especialização via prompt, não via modelo** | 1 modelo + N prompts = N especialistas (NOVO v3.1) |
 | **P7** | Entrega incremental via fluxo contínuo | Kanban + GitHub Projects (sem sprints fixas) |
-| **P8** | Stakeholder único formal | Prof. Dr. Nivaldo Carletto como patrocinador-avaliador |
+| **P8** | Stakeholder único formal | Prof. Dr. Nivaldo Carleto como patrocinador-avaliador |
 | **P9** | **Separação ontológica TAP ≠ EAP ≠ PDCA** | TAP autoriza, não é gerenciado (NOVO v3.1) |
 
 ---
@@ -630,13 +630,13 @@ Esta versão **não revisita debates encerrados** (hibridização, exclusão de 
 ### 3.1. Hierarquia de Resolução de Conflitos (Mantida)
 
 1º Valor entregue ao usuário final (PMBOK 7ª — Domínio de Entrega)
-2º Ementa da disciplina + orientação do Prof. Dr. Nivaldo Carletto
+2º Ementa da disciplina + orientação do Prof. Dr. Nivaldo Carleto
 3º PMBOK 7ª (12 princípios + 8 domínios de desempenho)
 4º Manifesto Ágil + Kanban (método de execução)
 5º PMBOK 6ª (apenas como dicionário de processos quando necessário)
 6º Literatura técnica complementar
 
-**Adendo v3.1:** Em caso de conflito entre velocidade de entrega e completude documental, a entrega de valor prevalece, desde que justificada via ADR e comunicada ao Prof. Dr. Nivaldo Carletto em até 48h.
+**Adendo v3.1:** Em caso de conflito entre velocidade de entrega e completude documental, a entrega de valor prevalece, desde que justificada via ADR e comunicada ao Prof. Dr. Nivaldo Carleto em até 48h.
 
 ### 3.2. Princípio de Governança Mínima Viável (GMV) — MANTIDO
 
@@ -644,12 +644,12 @@ Todo artefato de governança deve passar pelo teste GMV antes de ser produzido:
 
 | Pergunta | Se SIM | Se NÃO |
 |---|---|---|
-| O Prof. Dr. Nivaldo Carletto exigirá este artefato na avaliação? | Produzir completo | Simplificar ou eliminar |
+| O Prof. Dr. Nivaldo Carleto exigirá este artefato na avaliação? | Produzir completo | Simplificar ou eliminar |
 | Este artefato evita retrabalho futuro? | Produzir | Avaliar custo-benefício |
 | Este artefato é exigido pelo PMBOK 7ª como evidência de domínio? | Produzir | Documentar em 1 parágrafo no TAP |
 | Este artefato é útil para a equipe (não apenas para o professor)? | Produzir | Eliminar |
 
-**Regra:** Se ≥ 2 respostas forem NÃO, o artefato é candidato a eliminação. Decisão final via CCB (Prof. Dr. Nivaldo Carletto).
+**Regra:** Se ≥ 2 respostas forem NÃO, o artefato é candidato a eliminação. Decisão final via CCB (Prof. Dr. Nivaldo Carleto).
 
 ### 3.3. Separação Ontológica TAP ≠ EAP ≠ PDCA (NOVO v3.1)
 
@@ -836,11 +836,11 @@ git commit -m "SDD: feature-x (spec→code→review→test)"
 | | | N8.2 | 8.2. Documentação de Deploy + Rollback | MF2 |
 | **N9** | 9. Comunicação | N9.1 | 9.1. Matriz de Comunicação (RACI) | MF1 |
 | | | N9.2 | 9.2. Canais Oficiais (GitHub, e-mail) | MF1 |
-| | | N9.4 | 9.4. Cerimônias com Prof. Dr. Nivaldo Carletto | MF1 |
+| | | N9.4 | 9.4. Cerimônias com Prof. Dr. Nivaldo Carleto | MF1 |
 | **N10** | 10. Base de Conhecimento | N10.1 | 10.1. ADRs (decisões arquiteturais) | MF1 |
 | | | N10.2 | 10.2. Lições Aprendidas Contínuas | MF1 |
 | | | N10.3 | 10.3. Catálogo de Prompts SDD | MF1 |
-| **N11** | 11. Gestão de Mudanças | N11.1 | 11.1. CCB — Prof. Dr. Nivaldo Carletto | MF2 |
+| **N11** | 11. Gestão de Mudanças | N11.1 | 11.1. CCB — Prof. Dr. Nivaldo Carleto | MF2 |
 | | | N11.2 | 11.2. Registro de Solicitações de Mudança | MF2 |
 | | | N11.3 | 11.3. Label `change-request` no GitHub | MF2 |
 | | | N11.4 | 11.4. Aprovação e Versionamento | MF2 |
@@ -977,7 +977,7 @@ PROJETO COGME
 | 5 | Código-fonte (MVP full-stack) é deliverable formal e marco de sucesso | Mantida |
 | 6 | Stack tecnológica será 100% FOSS (decisão via ADR-002) | Mantida |
 | 7 | Equipe de 2 pessoas com carga ≤ 20h/semana cada | Mantida |
-| 8 | Prof. Dr. Nivaldo Carletto é o único stakeholder formal | Mantida |
+| 8 | Prof. Dr. Nivaldo Carleto é o único stakeholder formal | Mantida |
 | 9 | Áreas de Aquisições e Partes Interessadas são exclusão pedagógica intencional | Mantida |
 | 10 | Fases de Segurança, Acessibilidade, Observabilidade e i18n são pós-entrega | Mantida |
 | 11 | Documentação PMBOK é compliance acadêmico; código é produto | Mantida |
@@ -995,7 +995,7 @@ PROJETO COGME
 
 | Prioridade | Ação | DoD |
 |---|---|---|
-| 🔴 P0 | Completar TAP v1.0 (sem N1.1, com 10 declarações + 8 premissas + top 5 riscos) | TAP aprovado pelo Prof. Dr. Nivaldo Carletto |
+| 🔴 P0 | Completar TAP v1.0 (sem N1.1, com 10 declarações + 8 premissas + top 5 riscos) | TAP aprovado pelo Prof. Dr. Nivaldo Carleto |
 | 🔴 P0 | Criar ADR-001 (GitHub Projects substitui Gantt) + ADR-002 (Stack FOSS + SDD Local) + ADR-003 (Métricas) | ADRs registrados e linkados |
 
 ### 10.2. Prioridades da Semana Seguinte (15-19/09)
@@ -1037,7 +1037,7 @@ PROJETO COGME
 ### 11.1. Válido Enquanto
 
 - Ementa da disciplina mantiver PMBOK (qualquer edição) como base
-- Prof. Dr. Nivaldo Carletto mantiver papel de stakeholder único formal
+- Prof. Dr. Nivaldo Carleto mantiver papel de stakeholder único formal
 - Equipe mantiver 2 pessoas com ≤ 20h/semana cada
 - Prazo final mantiver em Nov/Dez 2026
 - Hardware local mantiver 58GB RAM (ou superior)
@@ -1056,7 +1056,7 @@ PROJETO COGME
 - Novo artefato solicitado fora da árvore (seções 00-11)
 - Mudança no critério de avaliação da disciplina
 - Scope creep > 15% do backlog original
-- Orientação verbal do Prof. Dr. Nivaldo Carletto divergente deste guardrail
+- Orientação verbal do Prof. Dr. Nivaldo Carleto divergente deste guardrail
 - Falha crítica na API de câmbio externa (muda arquitetura)
 - Burnout detectado (> 20h/semana por 2 semanas consecutivas)
 - Qwen 32B não atinge tg ≥ 6 t/s (fallback para 14B)

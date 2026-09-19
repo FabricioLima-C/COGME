@@ -61,7 +61,7 @@
 **Projeto:** COGME — Conversor de Ganhos em Moeda Estrangeira
 **Data de Emissão:** 10/09/2026 (revisado em 10/09/2026)
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto
 **Referência:** `analise_auditoria_1.2.md` + `OKB_COGME_v3.0` + `TAP_EAP.md` + `hardware.md`
 **Status:** Input consolidado para ADR-001, ADR-002, ADR-003, ADR-004 + Plano de Ação 10-22/09/2026
 
@@ -76,7 +76,7 @@ A reestruturação v1.2 introduz **5 mudanças estruturais** que alteram signifi
 | 1 | **Entrega parcial postergada de 19/09 para 22/09/2026 (09:00)**              | Restrição Temporal        | 🔴 CRÍTICA | Entrega + Medição          |
 | 2 | **PDCAs consolidados exclusivamente no Plano de Qualidade (Área 5)**        | Reestruturação Documental | 🔴 CRÍTICA | Qualidade + Medição        |
 | 3 | **Diagrama de Ishikawa (Causa e Efeito) obrigatório no Plano de Qualidade** | Novo Artefato               | 🟠 ALTA     | Qualidade + Incerteza        |
-| 4 | **Padronização do nome do stakeholder (Prof. Dr. Nivaldo Carletto)**       | Formalização              | 🟢 BAIXA    | Stakeholders                 |
+| 4 | **Padronização do nome do stakeholder (Prof. Dr. Nivaldo Carleto)**       | Formalização              | 🟢 BAIXA    | Stakeholders                 |
 | 5 | **Eliminação definitiva do termo "ADER"**                                  | Simplificação             | 🟢 BAIXA    | Abordagem de Desenvolvimento |
 
 **Veredito sumário:** A v1.2 **aprova 100% das decisões v1.1** e introduz **reestruturação documental centralizadora** (PDCAs + Ishikawa no Plano de Qualidade) que reduz fragmentação e aumenta defensabilidade acadêmica. O ganho de 3 dias úteis (19/09 → 22/09) eleva a folga de 21% para **31%**, mitigando o risco R-09.
@@ -122,7 +122,7 @@ A reestruturação v1.2 introduz **5 mudanças estruturais** que alteram signifi
 
 **Teste GMV (OKB v3.0 §4.2):**
 
-- P1 (Prof. Dr. Nivaldo Carletto exigirá?): ✅ SIM — exigência explícita
+- P1 (Prof. Dr. Nivaldo Carleto exigirá?): ✅ SIM — exigência explícita
 - P2 (Evita retrabalho?): ✅ SIM — visão consolidada facilita revisão
 - P3 (PMBOK 7ª exige?): ✅ SIM — Domínio de Qualidade + Medição
 - P4 (Útil para equipe?): ✅ SIM — ponto único de verdade para melhoria contínua
@@ -189,7 +189,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 
 ### 1.4. Mudança 4 — Padronização do Nome do Stakeholder
 
-**Contexto:** Alterar todas as menções de "Prof. Nivaldo" para **"Prof. Dr. Nivaldo Carletto"** (nome completo + titulação).
+**Contexto:** Alterar todas as menções de "Prof. Nivaldo" para **"Prof. Dr. Nivaldo Carleto"** (nome completo + titulação).
 
 **Impacto:**
 
@@ -224,7 +224,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 │  ├─ Plano de Custos v1.0 (simplificado)                        │
 │  ├─ Plano de Qualidade v1.0 (+ DoD/DoR + Ishikawa + PDCAs)    │
 │  └─ PDCAs consolidados de todas as atividades                 │
-│  Critério de aceite: Prof. Dr. Nivaldo Carletto valida         │
+│  Critério de aceite: Prof. Dr. Nivaldo Carleto valida         │
 ├─────────────────────────────────────────────────────────────────┤
 │  MARCO 2 — ENTREGA FINAL (Nov/Dez 2026)                       │
 │  Escopo: MVP funcional + documentação consolidada              │
@@ -345,7 +345,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 | **17/09 (qua)**        | Plano de Cronograma v1.0 (+ Roadmap 2 marcos)                                  | GP           | `docs/planos/03-cronograma.md`                        | Roadmap M1 (22/09) + M2 (Nov/Dez)                        |
 | **18/09 (qui)**        | Plano de Custos v1.0 (simplificado)                                            | GP           | `docs/planos/04-custos.md`                            | 1-2 páginas, foco em premissas                          |
 | **19/09 (sex)**        | Plano de Qualidade v1.0 (+ DoD/DoR + Ishikawa + PDCAs consolidados)            | GP           | `docs/planos/05-qualidade.md`                         | DoD/DoR + Ishikawa 6M + 13 PDCAs                         |
-| **22/09 (ter, 09:00)** | Revisão final + submissão ao Prof. Dr. Nivaldo Carletto                      | GP           | Issue no GitHub                                         | Zero achados CRÍTICOS no checklist                      |
+| **22/09 (ter, 09:00)** | Revisão final + submissão ao Prof. Dr. Nivaldo Carleto                      | GP           | Issue no GitHub                                         | Zero achados CRÍTICOS no checklist                      |
 
 ### 4.3. PDCA Consolidado (Entrega Parcial)
 
@@ -381,7 +381,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 
 - ✅ Alinha ao Domínio de Medição PMBOK 7ª (GitHub Insights)
 - ✅ Reduz burocracia (sem relatórios estáticos duplicados)
-- ⚠️ Risco: Prof. Dr. Nivaldo Carletto pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban
+- ⚠️ Risco: Prof. Dr. Nivaldo Carleto pode exigir Gantt tradicional → mitigação: gerar Gantt a posteriori a partir do Kanban
 
 ### 5.2. ADR-002 — Stack FOSS (11/09)
 
@@ -432,7 +432,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 
 | Trade-off                                | Risco                                                   | Mitigação                                                                   |
 | ---------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| MF1 estendida (19 → 22 dias)            | Percepção de "atraso" pelo Prof. Dr. Nivaldo Carletto | Comunicar explicitamente que postergação é estratégica (folga + Ishikawa) |
+| MF1 estendida (19 → 22 dias)            | Percepção de "atraso" pelo Prof. Dr. Nivaldo Carleto | Comunicar explicitamente que postergação é estratégica (folga + Ishikawa) |
 | PDCAs consolidados no Plano de Qualidade | Perda de contexto específico por plano                 | Cada PDCA referencia explicitamente o plano associado                         |
 | Diagrama de Ishikawa obrigatório        | Volume documental aumentado                             | Ishikawa é 1 página com 6 categorias (KISS)                                 |
 | Eliminação do termo "ADER"             | Percepção de "regressão"                             | Justificar via GMV (3×NÃO) + manter ADR padrão                             |
@@ -444,12 +444,12 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 | R-01 | Stack FOSS indefinida                                    | 80%           | Alto    | Crítico   | ADR-002 até 11/09                   | 🟠 Aberto            |
 | R-02 | EAP não sincronizada com GitHub                         | 60%           | Alto    | Alto       | Mapeamento 1:1 até 15/09            | 🟡 Em andamento      |
 | R-03 | Governança > 50% do tempo                               | 70%           | Médio  | Alto       | Aplicar GMV                          | 🟡 Aberto            |
-| R-04 | Prof. Dr. Nivaldo Carletto exigir Gantt tradicional      | 30%           | Médio  | Médio     | ADR-001 + Gantt derivado             | 🟢 Mitigado          |
+| R-04 | Prof. Dr. Nivaldo Carleto exigir Gantt tradicional      | 30%           | Médio  | Médio     | ADR-001 + Gantt derivado             | 🟢 Mitigado          |
 | R-05 | Scope creep                                              | 50%           | Alto    | Alto       | CCB + DoR rigoroso                   | 🟡 Monitorando       |
 | R-08 | Equipe exceder 20h/semana (burnout)                      | 50%           | Médio  | Alto       | WIP limits + métrica de burnout     | 🟡 Monitorando       |
 | R-09 | Entrega parcial 22/09 não concluída                    | **15%** | Alto    | Alto       | Plano de ação 10-22/09 + folga 28% | 🟢**Mitigado** |
 | R-10 | PDCA não documentado por atividade                      | 40%           | Médio  | Médio     | Template PDCA padronizado (§5.6)    | 🟠 Novo              |
-| R-11 | Fases 14-17 questionadas pelo Prof. Dr. Nivaldo Carletto | 20%           | Médio  | Médio     | Justificativa GMV + menção no §8  | 🟢 Mitigado          |
+| R-11 | Fases 14-17 questionadas pelo Prof. Dr. Nivaldo Carleto | 20%           | Médio  | Médio     | Justificativa GMV + menção no §8  | 🟢 Mitigado          |
 | R-12 | **Diagrama de Ishikawa incompleto**                | 30%           | Médio  | Médio     | Template 6M padronizado (§5.5)      | 🟠 Novo              |
 
 ---
@@ -469,9 +469,9 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 | 9  | **Plano de Qualidade v1.0 (+ DoD/DoR + Ishikawa + PDCAs consolidados)**       | GP           | 19/09                  | `docs/planos/05-qualidade.md`     |
 | 10 | **Diagrama de Ishikawa (6M) para problema central**                           | GP           | 19/09                  | Seção §5.5 do Plano de Qualidade |
 | 11 | **PDCAs consolidados de todas as atividades (13 PDCAs)**                      | GP           | 19/09                  | Seção §5.6 do Plano de Qualidade |
-| 12 | **Padronização do nome "Prof. Dr. Nivaldo Carletto" em todos os artefatos** | GP           | 19/09                  | Busca e substituição global       |
+| 12 | **Padronização do nome "Prof. Dr. Nivaldo Carleto" em todos os artefatos** | GP           | 19/09                  | Busca e substituição global       |
 | 13 | **Eliminação do termo "ADER" em todos os artefatos**                        | GP           | 19/09                  | Busca e substituição global       |
-| 14 | Revisão final + submissão ao Prof. Dr. Nivaldo Carletto                           | GP           | **22/09, 09:00** | Issue no GitHub                     |
+| 14 | Revisão final + submissão ao Prof. Dr. Nivaldo Carleto                           | GP           | **22/09, 09:00** | Issue no GitHub                     |
 | 15 | Formalizar ADR-004 (SDD Local)                                                      | GP + Dev     | 30/09                  | `docs/adr/ADR-004.md`             |
 
 ---
@@ -484,8 +484,8 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 | - | ------------------------------------------------------------------- | ----- | --------------------------------------------------- |
 | 1 | **Finalizar TAP v1.0 com EAP 13 fases + 8 premissas**         | 10/09 | Base para todos os outros planos                    |
 | 2 | **Redigir ADR-002 (Stack FOSS)**                              | 11/09 | Desbloqueia Fase 4 e Fase 5                         |
-| 3 | **Plano de Qualidade v1.0 com Ishikawa + PDCAs consolidados** | 19/09 | Exigência explícita do Prof. Dr. Nivaldo Carletto |
-| 4 | **Submissão ao Prof. Dr. Nivaldo Carletto em 22/09, 09:00**  | 22/09 | Marco M1 (Entrega Parcial)                          |
+| 3 | **Plano de Qualidade v1.0 com Ishikawa + PDCAs consolidados** | 19/09 | Exigência explícita do Prof. Dr. Nivaldo Carleto |
+| 4 | **Submissão ao Prof. Dr. Nivaldo Carleto em 22/09, 09:00**  | 22/09 | Marco M1 (Entrega Parcial)                          |
 
 ### 8.2. Prioridade 🟠 ALTA (Risco de retrabalho)
 
@@ -500,7 +500,7 @@ O Diagrama de Ishikawa (também conhecido como Espinha de Peixe ou 6M) é uma fe
 
 | #  | Ação                                                        | Prazo | Justificativa                  |
 | -- | ------------------------------------------------------------- | ----- | ------------------------------ |
-| 9  | **Padronização do nome "Prof. Dr. Nivaldo Carletto"** | 19/09 | Conformidade ABNT              |
+| 9  | **Padronização do nome "Prof. Dr. Nivaldo Carleto"** | 19/09 | Conformidade ABNT              |
 | 10 | **Eliminação do termo "ADER"**                        | 19/09 | Simplificação (GMV)          |
 | 11 | **Plano de Integração v1.0**                          | 15/09 | Guarda-chuva dos outros planos |
 | 12 | **Plano de Escopo v1.0 (+ EAP + Dicionário)**          | 16/09 | Base para cronograma e custos  |
@@ -525,7 +525,7 @@ Este relatório v1.2:
 - ✅ Declara trade-offs e riscos (Domínio de Incerteza PMBOK 7ª)
 - ✅ Respeita hierarquia de governança (OKB v3.0 §4.1)
 - ✅ É acionável (plano de ação 10-22/09 com datas e responsáveis)
-- ✅ **Padroniza o nome do stakeholder como "Prof. Dr. Nivaldo Carletto"** (Mudança 4)
+- ✅ **Padroniza o nome do stakeholder como "Prof. Dr. Nivaldo Carleto"** (Mudança 4)
 - ✅ **Elimina definitivamente o termo "ADER"** (Mudança 5)
 - ✅ **Consolida PDCAs no Plano de Qualidade (Área 5)** (Mudança 2)
 - ✅ **Inclui Diagrama de Ishikawa (6M) no Plano de Qualidade** (Mudança 3)

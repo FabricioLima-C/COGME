@@ -33,7 +33,7 @@
 | **Domínio de Entrega** | Foco em gerar valor tangível | Meta: MVP funcional com ≥ 80% cobertura de testes |
 | **Domínio de Medição** | Métricas de desempenho | Cycle time, throughput, SPI, CPI |
 | **Domínio de Incerteza** | Gestão de riscos e ambiguidade | Risk backlog + matriz prob./impacto |
-| **Stakeholder** | Pessoa/grupo afetado pelo projeto | Prof. Dr. Nivaldo Carletto (único formal) |
+| **Stakeholder** | Pessoa/grupo afetado pelo projeto | Prof. Dr. Nivaldo Carleto (único formal) |
 | **Valor Entregue** | Benefício tangível gerado | Princípio orientador: Valor > Satisfação > Conformidade |
 
 ## 3. Gerência de Projetos — PMBOK 6ª Edição
@@ -117,7 +117,7 @@
 |-------|-----------|----------|
 | **Fatec Taquaritinga** | Instituição de ensino | Faculdade de Tecnologia |
 | **ADS** | Análise e Desenvolvimento de Sistemas | Curso técnico |
-| **Prof. Dr. Nivaldo Carletto** | Stakeholder-avaliador | Patrocinador + avaliador contínuo |
+| **Prof. Dr. Nivaldo Carleto** | Stakeholder-avaliador | Patrocinador + avaliador contínuo |
 | **Disciplina de Gerência de Projetos** | Contexto acadêmico | PMBOK 6ª como bibliografia base |
 | **Simplificação Pedagógica** | Restrição didática | Exclusão de Aquisições e Partes Interessadas |
 | **Obsolescência Assumida** | Declaração de maturidade | PMBOK 6ª (2017) vs. 7ª (2021) |

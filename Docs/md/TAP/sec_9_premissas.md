@@ -1,5 +1,3 @@
-### 9. Premissas do Projeto
-
 Esta seção documenta os fatores considerados verdadeiros, reais ou certos para fins de planejamento do projeto COGME, conforme o Processo 4.1 (Desenvolver o Termo de Abertura do Projeto) do PMBOK®. Premissas são declarações de alto nível que, caso se provem falsas durante a execução, exigirão reavaliação imediata do escopo, cronograma ou custos do projeto, podendo acionar o processo formal de gestão de mudanças.
 
 #### 9.1. Premissas Estratégicas e Operacionais Fundamentais

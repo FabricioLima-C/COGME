@@ -101,7 +101,7 @@ Durante a redação da seção §5, foram identificadas **3 inconsistências** n
 | -- | ------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | I1 | Objetivo "Métricas e Indicadores" (§3) ainda cita**EVM (SPI/CPI) + Burndown** | TAP §3, linha "Métricas e Indicadores"    | Substituir por: "Durante toda a execução, o gerente do projeto deverá coletar e divulgar semanalmente as métricas de fluxo Kanban —**Cycle Time** (meta: ≤ 3 dias) e **Throughput** (meta: ≥ 5 cards/semana) — via GitHub Insights, garantindo a rastreabilidade do progresso conforme o Domínio de Medição do PMBOK 7ª." | 🔴 P0      |
 | I2 | Marco parcial citado como**08/09/2026**                                         | TAP §3 (Cronograma) + §8.3 (Restrições) | Atualizar para**22/09/2026** (data real da entrega parcial documental)                                                                                                                                                                                                                                                                      | 🔴 P0      |
-| I3 | Nome do stakeholder grafado como**"Nivaldo Carleto"**                           | TAP §1, §3.2, §7, §13                   | Corrigir para**"Nivaldo Carletto"** (grafia oficial)                                                                                                                                                                                                                                                                                        | 🟠 P1      |
+| I3 | Nome do stakeholder grafado como**"Nivaldo Carleto"**                           | TAP §1, §3.2, §7, §13                   | Corrigir para**"Nivaldo Carleto"** (grafia oficial)                                                                                                                                                                                                                                                                                        | 🟠 P1      |
 
 **Fundamentação das correções:**
 
@@ -149,11 +149,11 @@ Após a inserção da seção §5, prosseguir com as seções pendentes na ordem
 | 🔴 P0      | §10     | Redigir "Riscos" (Top 5 riscos)                                  | 11/09 |
 | 🔴 P0      | §11     | Redigir "Orçamento do Projeto" (R$ 0,00 + justificativa)        | 11/09 |
 | 🟠 P1      | §6      | Preencher "Marcos" com datas concretas (corrigir 08/09 → 22/09) | 11/09 |
-| 🟠 P1      | §7      | Corrigir nomes em "Partes interessadas" (Carletto, não Carleto) | 11/09 |
+| 🟠 P1      | §7      | Corrigir nomes em "Partes interessadas" (Carleto, não Carleto) | 11/09 |
 | 🟢 P3      | §1, §3 | Revisões textuais + corrigir inconsistências I1, I2, I3        | 11/09 |
 | 🟢 P3      | Global   | Remover comentários de revisão + padronização textual        | 11/09 |
 
-**Marco de submissão:** TAP v1.1 completo até 22/09/2026, 09:00 para submissão ao Prof. Dr. Nivaldo Carletto.
+**Marco de submissão:** TAP v1.1 completo até 22/09/2026, 09:00 para submissão ao Prof. Dr. Nivaldo Carleto.
 
 ---
 

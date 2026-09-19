@@ -1,6 +1,6 @@
 ## Ações declaradas para a alteração e melhoria deste relatório:
 
-1. Alterar todas as menções a "Prof. Nivaldo"  para "Prof. Dr. Nivaldo Carletto
+1. Alterar todas as menções a "Prof. Nivaldo"  para "Prof. Dr. Nivaldo Carleto
 2. Ajustar todas as datas referentes a 19/09/2026 para 22/09/2026 - 9:00AM e recalcular todos os riscos e entregas para a nova data
 3. Desconsiderar o termo ADER:
 
@@ -25,7 +25,7 @@
 **Projeto:** COGME — Conversor de Ganhos em Moeda Estrangeira
 **Data de Emissão:** 10/09/2026
 **Emissor:** GP Sênior PMBOK 7ª/PMO (Co-Autor Crítico)
-**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carletto
+**Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto
 **Referência:** `analise_auditoria_1.0.md` (revisado) + OKB v3.0 + TAP v1_opngoing + hardware.md
 **Status:** Input para ADR-001, ADR-002, ADR-003, ADR-004 + Plano de Ação 10-19/09
 

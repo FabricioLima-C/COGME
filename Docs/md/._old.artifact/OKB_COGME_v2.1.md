@@ -18,7 +18,7 @@ O projeto COGME opera sob **hibridização evolutiva**: PMBOK 7ª (princípios e
 | P4 | **SDD com IA auditável** | Todo código gerado por LLM deve ter rastreabilidade via commit |
 | P5 | **ACID e Clean Code como padrão** | Restrição técnica inegociável |
 | P6 | **Entrega incremental via fluxo contínuo** | Kanban + GitHub Projects (sem sprints fixas) |
-| P7 | **Stakeholder único formal** | Prof. Dr. Nivaldo Carletto como patrocinador-avaliador |
+| P7 | **Stakeholder único formal** | Prof. Dr. Nivaldo Carleto como patrocinador-avaliador |
 
 ---
 
