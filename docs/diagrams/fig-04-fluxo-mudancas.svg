@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FIG-4 — Fluxo de Controle Integrado de Mudanças
+  Projeto COGME | Plano de Integração §1.7.2 | Materializa CCB de membro único
+  Fonte e entregável: este arquivo .svg (padrão aberto W3C, zero dependências).
+  
+  Fluxo (Processo PMBOK 6ª: 4.6 — Realizar o Controle Integrado de Mudanças):
+  1. Abertura de Issue (change-request) -> Imediato
+  2. Análise de Impacto (GP) -> ≤ 48h
+  3. Decisão (Aprovada?) -> ≤ 24h
+     - Não: Encerramento com registro
+     - Sim: Etapa 4
+  4. Atualização (Equipe) -> ≤ 24h
+     - Simples: Commit no SSOT
+     - Marco/MVP: ADR + Comunicação
+  
+  Paleta: oficial do repositório (§9.1 da base de conhecimento operacional).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1050" viewBox="0 0 1000 1050"
+     role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+  <title id="t">Figura 4 — Fluxo de Controle Integrado de Mudanças do projeto COGME</title>
+  <desc id="d">Fluxograma vertical com 4 etapas, losango de decisão do CCB de membro único, SLAs de resposta e bifurcação entre mudanças simples (commit) e mudanças de marco (ADR).</desc>
+
+  <defs>
+    <marker id="arrG" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L12,5 L0,10 Z" fill="#616161"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="1050" fill="#FFFFFF"/>
+
+  <!-- Título -->
+  <text x="500" y="40" font-size="18" font-weight="bold" text-anchor="middle" fill="#212121">
+    Fluxo de Controle Integrado de Mudanças (CCB de Membro Único)
+  </text>
+
+  <!-- ============ ETAPA 1: ABERTURA ============ -->
+  <g id="etapa-1">
+    <rect x="300" y="80" width="400" height="80" rx="8" fill="#F5F5F5" stroke="#616161" stroke-width="2"/>
+    <text x="500" y="105" font-size="12" font-weight="bold" text-anchor="middle" fill="#616161">ETAPA 1</text>
+    <text x="500" y="125" font-size="16" font-weight="bold" text-anchor="middle" fill="#212121">Abertura de GitHub Issue</text>
+    <text x="500" y="145" font-size="14" text-anchor="middle" fill="#424242">label: change-request | Qualquer membro</text>
+  </g>
+
+  <!-- Seta 1 + SLA -->
+  <line x1="500" y1="160" x2="500" y2="210" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <g id="sla-1">
+    <rect x="515" y="173" width="80" height="24" rx="4" fill="#FFFFFF" stroke="#616161" stroke-width="1"/>
+    <text x="555" y="190" font-size="12" font-weight="bold" text-anchor="middle" fill="#B60205">Imediato</text>
+  </g>
+
+  <!-- ============ ETAPA 2: ANÁLISE ============ -->
+  <g id="etapa-2">
+    <rect x="300" y="220" width="400" height="100" rx="8" fill="#1D76DB" stroke="#0B3D6E" stroke-width="2"/>
+    <text x="500" y="245" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">ETAPA 2</text>
+    <text x="500" y="270" font-size="16" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Análise de Impacto</text>
+    <text x="500" y="290" font-size="14" text-anchor="middle" fill="#FFFFFF">(Escopo, Prazo, Qualidade)</text>
+    <text x="500" y="310" font-size="14" font-style="italic" text-anchor="middle" fill="#FFFFFF">GP (Leonardo)</text>
+  </g>
+
+  <!-- Seta 2 + SLA -->
+  <line x1="500" y1="320" x2="500" y2="370" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <g id="sla-2">
+    <rect x="515" y="333" width="70" height="24" rx="4" fill="#FFFFFF" stroke="#616161" stroke-width="1"/>
+    <text x="550" y="350" font-size="12" font-weight="bold" text-anchor="middle" fill="#B60205">≤ 48h</text>
+  </g>
+
+  <!-- ============ ETAPA 3: DECISÃO (CCB) ============ -->
+  <g id="etapa-3">
+    <polygon points="500,380 700,450 500,520 300,450" fill="#FBCA04" stroke="#8A6D00" stroke-width="2"/>
+    <text x="500" y="435" font-size="12" font-weight="bold" text-anchor="middle" fill="#212121">ETAPA 3</text>
+    <text x="500" y="455" font-size="16" font-weight="bold" text-anchor="middle" fill="#212121">Aprovada?</text>
+    <text x="500" y="475" font-size="13" font-style="italic" text-anchor="middle" fill="#424242">GP (CCB)</text>
+  </g>
+
+  <!-- Seta 3 (Não) + Encerramento -->
+  <line x1="700" y1="450" x2="770" y2="450" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="735" y="440" font-size="14" font-weight="bold" text-anchor="middle" fill="#B60205">Não</text>
+  
+  <g id="encerramento">
+    <rect x="780" y="400" width="180" height="100" rx="8" fill="#FEE2E2" stroke="#B60205" stroke-width="2"/>
+    <text x="870" y="435" font-size="14" font-weight="bold" text-anchor="middle" fill="#B60205">Encerramento</text>
+    <text x="870" y="455" font-size="14" text-anchor="middle" fill="#424242">com registro</text>
+    <text x="870" y="475" font-size="14" text-anchor="middle" fill="#424242">na Issue</text>
+  </g>
+
+  <!-- Seta 3 (Sim) + SLA -->
+  <line x1="500" y1="520" x2="500" y2="580" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <text x="480" y="555" font-size="14" font-weight="bold" text-anchor="end" fill="#0E8A16">Sim</text>
+  <g id="sla-3">
+    <rect x="515" y="538" width="70" height="24" rx="4" fill="#FFFFFF" stroke="#616161" stroke-width="1"/>
+    <text x="550" y="555" font-size="12" font-weight="bold" text-anchor="middle" fill="#B60205">≤ 24h</text>
+  </g>
+
+  <!-- ============ ETAPA 4: EXECUÇÃO ============ -->
+  <g id="etapa-4">
+    <rect x="300" y="590" width="400" height="110" rx="8" fill="#0E8A16" stroke="#075B0E" stroke-width="2"/>
+    <text x="500" y="615" font-size="12" font-weight="bold" text-anchor="middle" fill="#FFFFFF">ETAPA 4</text>
+    <text x="500" y="640" font-size="16" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Atualização do Backlog</text>
+    <text x="500" y="660" font-size="14" text-anchor="middle" fill="#FFFFFF">+ Planos Afetados + Commit</text>
+    <text x="500" y="680" font-size="14" font-style="italic" text-anchor="middle" fill="#FFFFFF">Equipe</text>
+  </g>
+
+  <!-- Seta 4 (Tronco) + SLA -->
+  <line x1="500" y1="700" x2="500" y2="750" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <g id="sla-4">
+    <rect x="515" y="713" width="70" height="24" rx="4" fill="#FFFFFF" stroke="#616161" stroke-width="1"/>
+    <text x="550" y="730" font-size="12" font-weight="bold" text-anchor="middle" fill="#B60205">≤ 24h</text>
+  </g>
+
+  <!-- ============ BIFURCAÇÃO ============ -->
+  <line x1="225" y1="750" x2="775" y2="750" stroke="#616161" stroke-width="2.5"/>
+  <line x1="225" y1="750" x2="225" y2="800" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+  <line x1="775" y1="750" x2="775" y2="800" stroke="#616161" stroke-width="2.5" marker-end="url(#arrG)"/>
+
+  <!-- Bifurcação Esquerda (Simples) -->
+  <g id="bifurcacao-simples">
+    <rect x="75" y="810" width="300" height="110" rx="8" fill="#F5F5F5" stroke="#616161" stroke-width="2"/>
+    <text x="225" y="840" font-size="14" font-weight="bold" text-anchor="middle" fill="#212121">Mudança Simples</text>
+    <text x="225" y="865" font-size="14" text-anchor="middle" fill="#424242">Commit no SSOT</text>
+    <text x="225" y="885" font-size="12" font-style="italic" text-anchor="middle" fill="#616161">(Sem impacto em marco)</text>
+    <text x="225" y="905" font-size="12" text-anchor="middle" fill="#616161">Registro em comentário</text>
+  </g>
+
+  <!-- Bifurcação Direita (Marco/ADR) -->
+  <g id="bifurcacao-marco">
+    <rect x="625" y="810" width="300" height="110" rx="8" fill="#D4C5F9" stroke="#9575CD" stroke-width="2"/>
+    <text x="775" y="840" font-size="14" font-weight="bold" text-anchor="middle" fill="#212121">Mudança de Marco/MVP</text>
+    <text x="775" y="865" font-size="14" text-anchor="middle" fill="#424242">ADR Formal</text>
+    <text x="775" y="885" font-size="12" font-style="italic" text-anchor="middle" fill="#616161">(Impacto em escopo/prazo)</text>
+    <text x="775" y="905" font-size="12" text-anchor="middle" fill="#616161">Comunicação no Marco</text>
+  </g>
+
+  <!-- ============ RODAPÉ ============ -->
+  <text x="500" y="980" font-size="12" font-style="italic" fill="#616161" text-anchor="middle">
+    CCB de membro único (GP Leonardo) — TAP v3 §1.c | Processo PMBOK 6ª: 4.6 (Controle Integrado de Mudanças)
+  </text>
+  <text x="500" y="1000" font-size="11" fill="#9E9E9E" text-anchor="middle">
+    Hierarquia: Mudança de Marco/MVP exige ADR (OKB §4) e comunicação ao Prof. Dr. Nivaldo Carleto no marco subsequente.
+  </text>
+</svg>

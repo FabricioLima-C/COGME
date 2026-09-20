@@ -32,9 +32,13 @@ O projeto adota um modelo trifásico de governança, declarado no TAP (§1.c):
 | Dicionário complementar | PMBOK® 6ª edição — processos citados apenas para rastreabilidade acadêmica | Fornece vocabulário estrutural quando necessário             |
 | Método de execução    | Manifesto Ágil (4 valores) + Kanban (fluxo contínuo)                           | Define*como* o trabalho é executado diariamente             |
 
-> **[FIG-1 — Modelo de Governança Híbrida Trifásico]**
-> *Inserir diagrama aqui.* Conteúdo obrigatório: três camadas empilhadas (PMBOK 7ª no topo como governança primária; PMBOK 6ª como dicionário complementar com marcação de obsolescência; Kanban/Manifesto Ágil na base como execução), com setas descendentes de autoridade e seta lateral de realimentação (lições aprendidas). Formato sugerido: Mermaid `flowchart TB` ou PlantUML, versionado em `/docs/diagrams/`.
-> *Necessidade real:* o conceito de hierarquia normativa é o núcleo da blindagem acadêmica do projeto; a representação visual elimina ambiguidade de precedência para o avaliador.
+**Figura 1 — Modelo de governança híbrida trifásico do projeto COGME**
+
+![Figura 1 — Modelo de governança híbrida trifásico](../../diagrams/fig-01-governanca-hibrida.svg)
+
+Fonte: Elaborado pelos autores (2026).
+
+Nota: A hierarquia normativa é descendente: PMBOK® 7ª (governança primária) → PMBOK® 6ª (dicionário complementar, com obsolescência formalmente declarada) → Manifesto Ágil + Kanban (método de execução via GitHub Projects como SSOT). A seta pontilhada vermelha representa o fluxo de realimentação por lições aprendidas (EAP N9.2).
 
 ### 1.2.1 Hierarquia de Resolução de Conflitos
 
@@ -93,9 +97,13 @@ O repositório GitHub e seu módulo GitHub Projects constituem o artefato primá
 | Code Review             | 4.5 Monitorar e Controlar            | Medição          | Revisão em pares obrigatória      |
 | Done (DoD)              | 5.4 Criar EAP (aceite do pacote)     | Entrega            | DoD atendido; commit mergeado       |
 
-> **[FIG-2 — Fluxo Kanban Oficial com WIP Limits]**
-> *Inserir diagrama aqui.* Conteúdo obrigatório: as cinco colunas (`Backlog → Ready (DoR) → In Progress → Code Review → Done (DoD)`) com gates标注ados entre colunas (DoR na entrada de `Ready`; tasklist 100% + revisão de pares na entrada de `Code Review`; DoD na entrada de `Done`), e o WIP limit (3/pessoa) destacado sobre a coluna `In Progress`. Formato sugerido: Mermaid `flowchart LR`.
-> *Necessidade real:* é o diagrama operacional central do projeto — materializa ADR-002 e ADR-004 em uma única visualização auditável pelo Prof. Dr. Nivaldo Carleto.
+**Figura 2 — Fluxo Kanban oficial do projeto COGME com gates de qualidade e WIP limits**
+
+![Figura 2 — Fluxo Kanban oficial com gates e WIP limits](../../diagrams/fig-02-fluxo-kanban.svg)
+
+Fonte: Elaborado pelos autores (2026).
+
+Nota: As cinco colunas materializam a ADR-002; os quatro gates (retângulos tracejados vermelhos) materializam os critérios de DoR e DoD do Plano de Escopo §2.6 e a regra de tasklist da ADR-004. Gate não atendido implica permanência do card na coluna anterior. O limite de WIP (3 cards/pessoa; máximo 9 no fluxo) visa à prevenção de burnout (TAP §10, R3). A linha pontilhada entre Code Review e In Progress representa o retorno por alterações solicitadas. Métricas de fluxo conforme ADR-003, com unidade de medida no card pai (subissues formalmente rejeitadas).
 
 ### 1.3.2 Regras de Fluxo e Rituais
 
@@ -194,10 +202,13 @@ Dada a restrição de orçamento zero (TAP §11), o Earned Value Management é i
 
 **Definição canônica do CFD (referência para os Planos de Cronograma e Comunicações):** O Cumulative Flow Diagram é a visualização gráfica do fluxo de trabalho acumulado no tempo, onde cada banda horizontal representa uma coluna do quadro Kanban e sua largura instantânea indica a quantidade de cards naquela etapa. Fonte de dados: GitHub Insights. Responsável pela publicação semanal: GP. **CFD saudável:** bandas paralelas de largura constante. **CFD com gargalo:** bandas que se alargam progressivamente. **Ação corretiva:** banda com largura superior a 2× a média das demais por 2 semanas consecutivas aciona Retrospectiva extraordinária (ADR-002).
 
-> **[FIG-3 — CFD: Padrão Saudável vs. Padrão com Gargalo]**
-> *Inserir diagrama aqui.* Conteúdo obrigatório: dois painéis lado a lado — (a) CFD saudável com bandas paralelas e estáveis; (b) CFD com gargalo mostrando alargamento progressivo da banda `Code Review`, com anotação da regra de ação corretiva (2× largura média por 2 semanas). Formato sugerido: imagem estática (PNG/SVG) gerada a partir de dados simulados, versionada em `/docs/diagrams/`.
-> *Necessidade real:* constitui a blindagem acadêmica formal para a ausência de Gantt/EVM — o avaliador compreende visualmente como o gargalo é detectado e tratado.
+**Figura 3 — Cumulative Flow Diagram: padrão saudável vs. padrão com gargalo**
 
+![Figura 3 — CFD comparativo: padrão saudável vs. padrão com gargalo](../../fig-03-cfd-comparativo.svg)
+
+Fonte: Elaborado pelos autores (2026).
+
+Nota: O painel (a) ilustra o fluxo estável, no qual as bandas (WIP por coluna) mantêm largura constante e paralela. O painel (b) apresenta a assinatura visual de gargalo na coluna *Code Review*: a taxa de saída torna-se inferior à taxa de entrada, causando alargamento progressivo da banda. A regra de ação corretiva (banda com largura superior a 2× a média das demais por 2 semanas consecutivas aciona Retrospectiva extraordinária) está anotada no próprio diagrama, conforme ADR-002 e ADR-003. Dados simulados para fins didáticos; a baseline real será coletada no período de calibração (23/09 a 03/10/2026) via GitHub Insights.
 
 ### 1.6.2 Métricas Legado (Não Aplicáveis — ADR-003)
 
@@ -233,9 +244,13 @@ O Gerente de Projeto (Leonardo David Silva Setti) atua como Change Control Board
 | 3     | Aprovação ou rejeição via comentário na Issue   | GP (Leonardo)             | ≤ 24h após análise    |
 | 4     | Atualização do backlog + planos afetados + commit  | Equipe                    | ≤ 24h após aprovação |
 
-> **[FIG-4 — Fluxo de Controle Integrado de Mudanças]**
-> *Inserir diagrama aqui.* Conteúdo obrigatório: fluxograma vertical com as 4 etapas da tabela acima, incluindo o losango de decisão na etapa 3 (Aprovada? → sim: etapa 4; não: encerramento com registro), os SLAs anotados em cada transição (≤ 48h, ≤ 24h, ≤ 24h) e a bifurcação da etapa 4 (mudança simples → commit; mudança de marco/escopo MVP → ADR + comunicação no marco subsequente). Formato sugerido: Mermaid `flowchart TD`.
-> *Necessidade real:* o processo de mudança é o mecanismo mais auditado em avaliações PMBOK; o fluxograma torna o CCB de membro único defensável e verificável.
+**Figura 4 — Fluxo de Controle Integrado de Mudanças do projeto COGME**
+
+![Figura 4 — Fluxo de Controle Integrado de Mudanças](../../diagrams/fig-04-fluxo-mudancas.svg)
+
+Fonte: Elaborado pelos autores (2026).
+
+Nota: O fluxograma materializa o Processo 4.6 do PMBOK 6ª (dicionário) e o Domínio de Incerteza do PMBOK 7ª. O Gerente de Projeto atua como Change Control Board (CCB) de membro único, conforme TAP §1.c e Premissa P7. Os SLAs (≤ 48h para análise, ≤ 24h para decisão e execução) garantem agilidade sem perda de auditabilidade. A bifurcação final distingue mudanças simples (registradas via commit) de mudanças de marco ou escopo do MVP, que exigem Architecture Decision Record (ADR) formal e comunicação ao Prof. Dr. Nivaldo Carleto no marco subsequente.
 
 ### 1.7.3 Limiar de Formalidade
 
