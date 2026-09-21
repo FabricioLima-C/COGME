@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="Arial, Helvetica, sans-serif">
+   <rect x="0" y="0" width="1200" height="500" fill="#FFFFFF"/>
+   <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#111111">Matriz de Rastreabilidade de Dependências — Stack FOSS Canônica</text>
+   <rect x="50" y="80" width="1100" height="50" rx="4" fill="#1F3A5F" stroke="#1F3A5F" stroke-width="2"/>
+   <text x="150" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Dependência</text>
+   <text x="320" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Versão</text>
+   <text x="470" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Licença</text>
+   <text x="620" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Conformidade</text>
+   <text x="770" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">EAP N1.4/N4.4</text>
+   <text x="920" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">ADR-001</text>
+   <text x="1070" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Categoria</text>
+   <rect x="50" y="130" width="1100" height="50" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="160" text-anchor="middle" font-size="12" fill="#111111">FastAPI</text>
+   <text x="320" y="160" text-anchor="middle" font-size="12" fill="#333333">≥0.100</text>
+   <text x="470" y="160" text-anchor="middle" font-size="12" fill="#333333">MIT</text>
+   <text x="620" y="160" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="160" text-anchor="middle" font-size="12" fill="#333333">N4.4</text>
+   <text x="920" y="160" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="160" text-anchor="middle" font-size="11" fill="#555555">Backend</text>
+   <rect x="50" y="180" width="1100" height="50" rx="4" fill="#FFFFFF" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="210" text-anchor="middle" font-size="12" fill="#111111">SQLite</text>
+   <text x="320" y="210" text-anchor="middle" font-size="12" fill="#333333">3.x</text>
+   <text x="470" y="210" text-anchor="middle" font-size="12" fill="#333333">Public Domain</text>
+   <text x="620" y="210" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="210" text-anchor="middle" font-size="12" fill="#333333">N4.4</text>
+   <text x="920" y="210" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="210" text-anchor="middle" font-size="11" fill="#555555">Banco de Dados</text>
+   <rect x="50" y="230" width="1100" height="50" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="260" text-anchor="middle" font-size="12" fill="#111111">WeasyPrint</text>
+   <text x="320" y="260" text-anchor="middle" font-size="12" fill="#333333">≥59.0</text>
+   <text x="470" y="260" text-anchor="middle" font-size="12" fill="#333333">BSD-3-Clause</text>
+   <text x="620" y="260" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="260" text-anchor="middle" font-size="12" fill="#333333">N4.4</text>
+   <text x="920" y="260" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="260" text-anchor="middle" font-size="11" fill="#555555">Geração PDF</text>
+   <rect x="50" y="280" width="1100" height="50" rx="4" fill="#FFFFFF" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="310" text-anchor="middle" font-size="12" fill="#111111">pytest</text>
+   <text x="320" y="310" text-anchor="middle" font-size="12" fill="#333333">≥7.0</text>
+   <text x="470" y="310" text-anchor="middle" font-size="12" fill="#333333">MIT</text>
+   <text x="620" y="310" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="310" text-anchor="middle" font-size="12" fill="#333333">N4.4</text>
+   <text x="920" y="310" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="310" text-anchor="middle" font-size="11" fill="#555555">Testes</text>
+   <rect x="50" y="330" width="1100" height="50" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="360" text-anchor="middle" font-size="12" fill="#111111">GitHub Actions</text>
+   <text x="320" y="360" text-anchor="middle" font-size="12" fill="#333333">Free Tier</text>
+   <text x="470" y="360" text-anchor="middle" font-size="12" fill="#333333">Proprietário gratuito</text>
+   <text x="620" y="360" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="360" text-anchor="middle" font-size="12" fill="#333333">N1.4</text>
+   <text x="920" y="360" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="360" text-anchor="middle" font-size="11" fill="#555555">CI/CD</text>
+   <rect x="50" y="380" width="1100" height="50" rx="4" fill="#FFFFFF" stroke="#555555" stroke-width="1"/>
+   <text x="150" y="410" text-anchor="middle" font-size="12" fill="#111111">llama.cpp</text>
+   <text x="320" y="410" text-anchor="middle" font-size="12" fill="#333333">0.4.0-dev</text>
+   <text x="470" y="410" text-anchor="middle" font-size="12" fill="#333333">MIT</text>
+   <text x="620" y="410" text-anchor="middle" font-size="14" fill="#2E7D32" font-weight="bold">✅</text>
+   <text x="770" y="410" text-anchor="middle" font-size="12" fill="#333333">N4.4</text>
+   <text x="920" y="410" text-anchor="middle" font-size="12" fill="#333333">✅</text>
+   <text x="1070" y="410" text-anchor="middle" font-size="11" fill="#555555">SDD Local (IA)</text>
+   <rect x="50" y="450" width="1100" height="40" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+   <text x="600" y="475" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">100% das dependências auditadas e conformantes — Linha de base R$ 0,00 preservada</text>
+ </svg>

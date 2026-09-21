@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#1F3A5F"/>
+    </marker>
+    <marker id="ar-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#2E7D32"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="500" fill="#FFFFFF"/>
+  
+  <!-- Título Ilustrativo Interno -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#111111">Modelo de Governança Híbrida Trifásico</text>
+
+  <!-- Camada 1: PMBOK 7ª (Topo) -->
+  <rect x="50" y="80" width="500" height="100" rx="6" fill="#1F3A5F" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="300" y="115" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">PMBOK® 7ª Edição</text>
+  <text x="300" y="140" text-anchor="middle" font-size="14" fill="#E0E7EF">12 Princípios + 8 Domínios de Desempenho</text>
+  <text x="300" y="160" text-anchor="middle" font-size="13" fill="#E0E7EF">(Governança Primária: Por que e Para quê)</text>
+
+  <!-- Seta Descendente 1 -->
+  <line x1="300" y1="180" x2="300" y2="220" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="315" y="205" font-size="11" fill="#555555">Autoridade Normativa</text>
+
+  <!-- Camada 2: PMBOK 6ª (Meio) -->
+  <rect x="50" y="220" width="500" height="100" rx="6" fill="#F8F9FA" stroke="#546E7A" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="300" y="255" text-anchor="middle" font-size="18" font-weight="bold" fill="#37474F">PMBOK® 6ª Edição</text>
+  <text x="300" y="280" text-anchor="middle" font-size="14" fill="#555555">Processos como Dicionário Complementar</text>
+  <text x="300" y="300" text-anchor="middle" font-size="13" fill="#C0392B" font-weight="bold">Obsolescência Assumida para Métricas Preditivas (EVM)</text>
+
+  <!-- Seta Descendente 2 -->
+  <line x1="300" y1="320" x2="300" y2="360" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="315" y="345" font-size="11" fill="#555555">Vocabulário Estrutural</text>
+
+  <!-- Camada 3: Kanban/Ágil (Base) -->
+  <rect x="50" y="360" width="500" height="100" rx="6" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+  <text x="300" y="395" text-anchor="middle" font-size="18" font-weight="bold" fill="#FFFFFF">Manifesto Ágil + Kanban (GitHub Projects)</text>
+  <text x="300" y="420" text-anchor="middle" font-size="14" fill="#E8F5E9">Fluxo Contínuo, WIP Limits e Métricas de Fluxo</text>
+  <text x="300" y="440" text-anchor="middle" font-size="13" fill="#E8F5E9">(Método de Execução: Como o trabalho flui)</text>
+
+  <!-- Setas Laterais de Realimentação -->
+  <path d="M 550 410 Q 620 410 620 270 Q 620 130 550 135" fill="none" stroke="#2E7D32" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#ar-green)"/>
+  <text x="630" y="275" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="start">Lições Aprendidas</text>
+  <text x="637" y="290" font-size="12" font-weight="bold" fill="#2E7D32" text-anchor="start">e Realimentação</text>
+</svg>

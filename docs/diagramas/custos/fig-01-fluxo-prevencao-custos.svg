@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar-flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#1F3A5F"/>
+    </marker>
+    <marker id="ar-reject" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#C0392B"/>
+    </marker>
+    <marker id="ar-approve" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#2E7D32"/>
+    </marker>
+  </defs>
+  
+  <rect x="0" y="0" width="800" height="900" fill="#FFFFFF"/>
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#111111">Fluxo de Prevenção de Custos — Conformidade FOSS</text>
+  
+  <!-- Etapa Inicial -->
+  <rect x="250" y="80" width="300" height="60" rx="6" fill="#F8F9FA" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="400" y="105" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Nova dependência identificada</text>
+  <text x="400" y="125" text-anchor="middle" font-size="12" fill="#555555">(biblioteca, API, ferramenta, serviço)</text>
+  
+  <!-- Seta 1 -->
+  <line x1="400" y1="140" x2="400" y2="180" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- Gate 1: Licença OSI -->
+  <polygon points="400,180 520,220 400,260 280,220" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" font-size="13" font-weight="bold" fill="#111111">Gate 1:</text>
+  <text x="400" y="235" text-anchor="middle" font-size="12" fill="#333333">Licença OSI-approved?</text>
+  
+  <!-- Ramo NÃO (rejeição) -->
+  <line x1="520" y1="220" x2="620" y2="220" stroke="#C0392B" stroke-width="2" marker-end="url(#ar-reject)"/>
+  <text x="570" y="210" text-anchor="middle" font-size="11" font-weight="bold" fill="#C0392B">NÃO</text>
+  <rect x="620" y="190" width="150" height="60" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+  <text x="695" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#C0392B">Rejeição imediata</text>
+  <text x="695" y="235" text-anchor="middle" font-size="10" fill="#333333">Buscar alternativa FOSS</text>
+  
+  <!-- Ramo SIM -->
+  <line x1="400" y1="260" x2="400" y2="300" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-approve)"/>
+  <text x="415" y="285" font-size="11" font-weight="bold" fill="#2E7D32">SIM</text>
+  
+  <!-- Gate 2: Plano gratuito -->
+  <polygon points="400,300 520,340 400,380 280,340" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="400" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#111111">Gate 2:</text>
+  <text x="400" y="355" text-anchor="middle" font-size="12" fill="#333333">Plano gratuito suficiente</text>
+  <text x="400" y="370" text-anchor="middle" font-size="12" fill="#333333">para MVP acadêmico?</text>
+  
+  <!-- Ramo NÃO (buscar alternativa) -->
+  <line x1="520" y1="340" x2="620" y2="340" stroke="#E65100" stroke-width="2" marker-end="url(#ar-flow)"/>
+  <text x="570" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">NÃO</text>
+  <rect x="620" y="310" width="150" height="60" rx="4" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+  <text x="695" y="335" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">Buscar alternativa FOSS</text>
+  <text x="695" y="355" text-anchor="middle" font-size="10" fill="#333333">com plano gratuito</text>
+  
+  <!-- Seta de retorno -->
+  <path d="M 695 370 L 695 390 L 400 390 L 400 380" fill="none" stroke="#E65100" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Ramo SIM -->
+  <line x1="400" y1="380" x2="400" y2="420" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-approve)"/>
+  <text x="415" y="405" font-size="11" font-weight="bold" fill="#2E7D32">SIM</text>
+  
+  <!-- Gate 3: Registro em ADR -->
+  <polygon points="400,420 520,460 400,500 280,460" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="400" y="455" text-anchor="middle" font-size="13" font-weight="bold" fill="#111111">Gate 3:</text>
+  <text x="400" y="475" text-anchor="middle" font-size="12" fill="#333333">Registrado em ADR-001</text>
+  <text x="400" y="490" text-anchor="middle" font-size="12" fill="#333333">ou nova ADR?</text>
+  
+  <!-- Ramo NÃO (registrar) -->
+  <line x1="520" y1="460" x2="620" y2="460" stroke="#E65100" stroke-width="2" marker-end="url(#ar-flow)"/>
+  <text x="570" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">NÃO</text>
+  <rect x="620" y="430" width="150" height="60" rx="4" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+  <text x="695" y="455" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">Registrar antes de usar</text>
+  <text x="695" y="475" text-anchor="middle" font-size="10" fill="#333333">ADR específica ou</text>
+  <text x="695" y="488" text-anchor="middle" font-size="10" fill="#333333">atualização ADR-001</text>
+  
+  <!-- Seta de retorno -->
+  <path d="M 695 490 L 695 510 L 400 510 L 400 500" fill="none" stroke="#E65100" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Ramo SIM -->
+  <line x1="400" y1="500" x2="400" y2="540" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-approve)"/>
+  <text x="415" y="525" font-size="11" font-weight="bold" fill="#2E7D32">SIM</text>
+  
+  <!-- Aprovação Final -->
+  <rect x="250" y="540" width="300" height="60" rx="6" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+  <text x="400" y="565" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">Incorporação autorizada</text>
+  <text x="400" y="585" text-anchor="middle" font-size="12" fill="#E8F5E9">Dependência FOSS conformante</text>
+  
+  <!-- Anotação de change-request -->
+  <rect x="150" y="650" width="500" height="80" rx="6" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+  <text x="400" y="675" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">Desvio de qualquer gate aciona:</text>
+  <text x="400" y="695" text-anchor="middle" font-size="12" fill="#333333">Issue com label change-request (Integração §1.7)</text>
+  <text x="400" y="712" text-anchor="middle" font-size="11" fill="#555555">Análise de impacto pelo GP (CCB) em ≤ 48h</text>
+  <text x="400" y="725" text-anchor="middle" font-size="11" fill="#555555">Registro em ADR se alteração de marco ou escopo MVP</text>
+  
+  <!-- Linha de base -->
+  <rect x="150" y="780" width="500" height="50" rx="4" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="1.5"/>
+  <text x="400" y="805" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">Linha de Base de Custos: R$ 0,00 (imutável sem CCB)</text>
+  <text x="400" y="820" text-anchor="middle" font-size="11" fill="#555555">TAP §11 + Premissa P2 (FOSS absoluto)</text>
+</svg>

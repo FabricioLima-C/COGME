@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" font-family="Arial, Helvetica, sans-serif">
+   <defs>
+     <marker id="ar-axis" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+       <path d="M0,0 L9,3 L0,6 Z" fill="#333333"/>
+     </marker>
+   </defs>
+
+   <!-- Fundo -->
+   <rect x="0" y="0" width="1400" height="650" fill="#FFFFFF"/>
+
+   <!-- Título ilustrativo interno -->
+   <text x="700" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#111111">Roadmap Macro do Cronograma — Macro-Fases e Marcos</text>
+
+   <!-- Legenda (marcos) -->
+   <polygon points="1060,54 1068,62 1060,70 1052,62" fill="#E67E22" stroke="#E67E22" stroke-width="1.5"/>
+   <text x="1076" y="66" font-size="10.5" fill="#333333">Marco oficial</text>
+   <polygon points="1185,54 1193,62 1185,70 1177,62" fill="#FFFFFF" stroke="#E65100" stroke-width="1.5" stroke-dasharray="3,2"/>
+   <text x="1201" y="66" font-size="10.5" fill="#333333">Marco auxiliar</text>
+
+   <!-- Rótulos de mês (topo) -->
+   <text x="276" y="82" text-anchor="middle" font-size="11" fill="#777777">set/2026</text>
+   <text x="632" y="82" text-anchor="middle" font-size="11" fill="#777777">out/2026</text>
+   <text x="989" y="82" text-anchor="middle" font-size="11" fill="#777777">nov/2026</text>
+   <text x="1246" y="82" text-anchor="middle" font-size="11" fill="#777777">dez/2026</text>
+
+   <!-- Grade vertical (início de mês) -->
+   <line x1="451" y1="92" x2="451" y2="434" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4,3"/>
+   <line x1="814" y1="92" x2="814" y2="434" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4,3"/>
+   <line x1="1165" y1="92" x2="1165" y2="434" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4,3"/>
+   <line x1="1328" y1="92" x2="1328" y2="434" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4,3"/>
+
+   <!-- Barra MF1: Fundação (01/09 – 30/09) -->
+   <rect x="100" y="105" width="339" height="58" rx="6" fill="#1F3A5F" stroke="#1F3A5F" stroke-width="2"/>
+   <text x="270" y="125" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+     <tspan x="270" dy="0">MF1: Fundação</tspan>
+     <tspan x="270" dy="17" font-size="10.5" font-weight="normal" fill="#E0E7EF">01/09 – 30/09/2026</tspan>
+     <tspan x="270" dy="15" font-size="10" font-weight="normal" fill="#E0E7EF">5 planos (Áreas 1–5) + SSOT + ADRs 001–004</tspan>
+   </text>
+
+   <!-- Barra MF2: Construção (01/10 – 15/11) -->
+   <rect x="451" y="183" width="526" height="58" rx="6" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+   <text x="714" y="203" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+     <tspan x="714" dy="0">MF2: Construção</tspan>
+     <tspan x="714" dy="17" font-size="10.5" font-weight="normal" fill="#E8F5E9">01/10 – 15/11/2026</tspan>
+     <tspan x="714" dy="15" font-size="10" font-weight="normal" fill="#E8F5E9">MVP funcional + cobertura ≥ 80% + UAT</tspan>
+   </text>
+
+   <!-- Barra MF3: Consolidação (16/11 – 15/12) -->
+   <rect x="989" y="261" width="339" height="58" rx="6" fill="#6A1B9A" stroke="#6A1B9A" stroke-width="2"/>
+   <text x="1158" y="281" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+     <tspan x="1158" dy="0">MF3: Consolidação</tspan>
+     <tspan x="1158" dy="17" font-size="10.5" font-weight="normal" fill="#F3E5F5">16/11 – 15/12/2026</tspan>
+     <tspan x="1158" dy="15" font-size="10" font-weight="normal" fill="#F3E5F5">Documentação + Aceite M4 + tag de release</tspan>
+   </text>
+
+   <!-- Barra auxiliar: Calibração (23/09 – 03/10) -->
+   <rect x="357" y="340" width="117" height="30" rx="4" fill="#FFF3E0" stroke="#E65100" stroke-width="2" stroke-dasharray="4,2"/>
+   <text x="484" y="359" text-anchor="start" font-size="11" font-weight="bold" fill="#E65100">Calibração · 23/09 – 03/10 (auxiliar)</text>
+
+   <!-- Eixo temporal -->
+   <line x1="100" y1="440" x2="1340" y2="440" stroke="#333333" stroke-width="2" marker-end="url(#ar-axis)"/>
+   <line x1="100" y1="434" x2="100" y2="446" stroke="#333333" stroke-width="2"/>
+   <line x1="451" y1="434" x2="451" y2="446" stroke="#333333" stroke-width="2"/>
+   <line x1="814" y1="434" x2="814" y2="446" stroke="#333333" stroke-width="2"/>
+   <line x1="1165" y1="434" x2="1165" y2="446" stroke="#333333" stroke-width="2"/>
+
+   <!-- Marco M1 (22/09) — linha 1 -->
+   <polygon points="346,428 358,440 346,452 334,440" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+   <line x1="346" y1="452" x2="346" y2="464" stroke="#E67E22" stroke-width="1.5"/>
+   <text x="346" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">M1 · 22/09</text>
+   <text x="346" y="492" text-anchor="middle" font-size="9" fill="#555555">Entrega Parcial Documental</text>
+
+   <!-- Marco M2 (30/09) — linha 2 -->
+   <polygon points="439,428 451,440 439,452 427,440" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+   <line x1="439" y1="452" x2="439" y2="499" stroke="#E67E22" stroke-width="1.5"/>
+   <text x="439" y="513" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">M2 · 30/09</text>
+   <text x="439" y="527" text-anchor="middle" font-size="9" fill="#555555">Ambiente e Modelagem</text>
+
+   <!-- Marco auxiliar Calibração (03/10) — linha 3 -->
+   <polygon points="474,428 486,440 474,452 462,440" fill="#FFFFFF" stroke="#E65100" stroke-width="2" stroke-dasharray="3,2"/>
+   <line x1="474" y1="452" x2="474" y2="534" stroke="#E65100" stroke-width="1.5" stroke-dasharray="4,2"/>
+   <text x="474" y="548" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">Calibração · 03/10</text>
+   <text x="474" y="562" text-anchor="middle" font-size="9" fill="#555555">Baseline de métricas (auxiliar)</text>
+
+   <!-- Marco M3 (15/11) — linha 1 -->
+   <polygon points="977,428 989,440 977,452 965,440" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+   <line x1="977" y1="452" x2="977" y2="464" stroke="#E67E22" stroke-width="1.5"/>
+   <text x="977" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">M3 · 15/11</text>
+   <text x="977" y="492" text-anchor="middle" font-size="9" fill="#555555">MVP Funcional (Beta)</text>
+
+   <!-- Marco M4 (15/12) — linha 1 -->
+   <polygon points="1328,428 1340,440 1328,452 1316,440" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+   <line x1="1328" y1="452" x2="1328" y2="464" stroke="#E67E22" stroke-width="1.5"/>
+   <text x="1328" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#E65100">M4 · 15/12</text>
+   <text x="1328" y="492" text-anchor="middle" font-size="9" fill="#555555">Encerramento e Aceite Final</text>
+
+   <!-- Nota técnica interna -->
+   <rect x="200" y="580" width="1000" height="52" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="1.5"/>
+   <text x="700" y="601" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#111111">Única representação tipo Gantt admitida — restrita ao nível macro, derivada do SSOT (OKB §8.1).</text>
+   <text x="700" y="620" text-anchor="middle" font-size="11" fill="#333333">Nível operacional regido por fluxo contínuo Kanban (ADR-002), sem datas preditivas por atividade.</text>
+ </svg>
