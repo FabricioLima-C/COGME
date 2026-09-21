@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="1200" height="500" fill="#FFFFFF"/>
+  <text x="600" y="42" text-anchor="middle" font-size="23" font-weight="bold" fill="#111111">Estrutura Analítica do Projeto (EAP) — Visão Macro</text>
+  
+  <!-- N0 -->
+  <rect x="450" y="80" width="300" height="60" rx="6" fill="#111111" stroke="#111111" stroke-width="2"/>
+  <text x="600" y="116" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">N0: COGME</text>
+  
+  <!-- Linhas para MFs -->
+  <line x1="600" y1="140" x2="600" y2="180" stroke="#777777" stroke-width="2"/>
+  <line x1="200" y1="180" x2="1000" y2="180" stroke="#777777" stroke-width="2"/>
+  <line x1="200" y1="180" x2="200" y2="220" stroke="#777777" stroke-width="2"/>
+  <line x1="600" y1="180" x2="600" y2="220" stroke="#777777" stroke-width="2"/>
+  <line x1="1000" y1="180" x2="1000" y2="220" stroke="#777777" stroke-width="2"/>
+  
+  <!-- MF1 -->
+  <rect x="50" y="220" width="300" height="240" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="3"/>
+  <rect x="50" y="220" width="300" height="40" rx="6" fill="#1F3A5F"/>
+  <text x="200" y="246" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">MF1: Fundação</text>
+  <text x="200" y="280" text-anchor="middle" font-size="14" fill="#111111">N1. Iniciação e Planejamento</text>
+  <text x="200" y="305" text-anchor="middle" font-size="14" fill="#111111">N2. Levantamento de Requisitos</text>
+  <text x="200" y="330" text-anchor="middle" font-size="14" fill="#111111">N3. Modelagem e Prototipação</text>
+  <text x="200" y="355" text-anchor="middle" font-size="14" fill="#111111">N4. Configuração de Ambiente</text>
+  <text x="200" y="380" text-anchor="middle" font-size="14" fill="#111111">N8. Comunicação</text>
+  <text x="200" y="405" text-anchor="middle" font-size="14" fill="#111111">N9. Base de Conhecimento</text>
+
+  <!-- MF2 -->
+  <rect x="450" y="220" width="300" height="240" rx="6" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+  <rect x="450" y="220" width="300" height="40" rx="6" fill="#2E7D32"/>
+  <text x="600" y="246" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">MF2: Construção</text>
+  <text x="600" y="280" text-anchor="middle" font-size="14" fill="#111111">N5. Desenvolvimento do Sistema</text>
+  <text x="600" y="305" text-anchor="middle" font-size="14" fill="#111111">N6. Garantia da Qualidade</text>
+  <text x="600" y="330" text-anchor="middle" font-size="14" fill="#111111">N7. DevOps e CI/CD</text>
+  <text x="600" y="355" text-anchor="middle" font-size="14" fill="#111111">N10. Gestão de Mudanças</text>
+
+  <!-- MF3 -->
+  <rect x="850" y="220" width="300" height="240" rx="6" fill="#FFFFFF" stroke="#6A1B9A" stroke-width="3"/>
+  <rect x="850" y="220" width="300" height="40" rx="6" fill="#6A1B9A"/>
+  <text x="1000" y="246" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">MF3: Consolidação</text>
+  <text x="1000" y="280" text-anchor="middle" font-size="14" fill="#111111">N11. Documentação do Projeto</text>
+  <text x="1000" y="305" text-anchor="middle" font-size="14" fill="#111111">N12. Encerramento</text>
+</svg>

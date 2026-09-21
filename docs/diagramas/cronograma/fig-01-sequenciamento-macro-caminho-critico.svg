@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar-flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#1F3A5F"/>
+    </marker>
+    <marker id="ar-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#2E7D32"/>
+    </marker>
+    <marker id="ar-feedback" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#E67E22"/>
+    </marker>
+  </defs>
+  
+  <!-- Fundo -->
+  <rect x="0" y="0" width="1200" height="700" fill="#FFFFFF"/>
+  
+  <!-- Título -->
+  <text x="600" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#111111">Sequenciamento Macro e Caminho Crítico Empírico</text>
+  
+  <!-- ================= CAMADA SUPERIOR: MACRO-FASES E GATES ================= -->
+  <text x="600" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">Camada Macro — Macro-Fases e Gates de Controle</text>
+  
+  <!-- MF1 -->
+  <rect x="60" y="95" width="200" height="70" rx="6" fill="#1F3A5F" stroke="#1F3A5F" stroke-width="2"/>
+  <text x="160" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+    <tspan x="160" dy="0">MF1: Fundação</tspan>
+    <tspan x="160" dy="20" font-size="11" font-weight="normal" fill="#E0E7EF">01/09 – 30/09/2026</tspan>
+    <tspan x="160" dy="15" font-size="11" font-weight="normal" fill="#E0E7EF">5 planos (Áreas 1–5)</tspan>
+  </text>
+  
+  <!-- Seta MF1 -> M2 -->
+  <line x1="260" y1="130" x2="280" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- Gate M2 -->
+  <polygon points="300,110 320,130 300,150 280,130" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+  <text x="300" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#E67E22">M2</text>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#555555">30/09</text>
+  
+  <!-- Seta M2 -> Calibração -->
+  <line x1="320" y1="130" x2="340" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- Calibração -->
+  <rect x="340" y="105" width="140" height="50" rx="6" fill="#FFF3E0" stroke="#E67E22" stroke-width="2" stroke-dasharray="4,2"/>
+  <text x="410" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">
+    <tspan x="410" dy="0">Calibração</tspan>
+    <tspan x="410" dy="18" font-size="11" font-weight="normal" fill="#555555">03/10 (auxiliar)</tspan>
+  </text>
+  
+  <!-- Seta Calibração -> MF2 -->
+  <line x1="480" y1="130" x2="500" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- MF2 -->
+  <rect x="500" y="95" width="200" height="70" rx="6" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+  <text x="600" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+    <tspan x="600" dy="0">MF2: Construção</tspan>
+    <tspan x="600" dy="20" font-size="11" font-weight="normal" fill="#E8F5E9">01/10 – 15/11/2026</tspan>
+    <tspan x="600" dy="15" font-size="11" font-weight="normal" fill="#E8F5E9">MVP funcional + coverage ≥80%</tspan>
+  </text>
+  
+  <!-- Seta MF2 -> M3 -->
+  <line x1="700" y1="130" x2="720" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- Gate M3 -->
+  <polygon points="740,110 760,130 740,150 720,130" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+  <text x="740" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#E67E22">M3</text>
+  <text x="740" y="185" text-anchor="middle" font-size="10" fill="#555555">15/11</text>
+  
+  <!-- Seta M3 -> MF3 -->
+  <line x1="760" y1="130" x2="780" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- MF3 -->
+  <rect x="780" y="95" width="200" height="70" rx="6" fill="#6A1B9A" stroke="#6A1B9A" stroke-width="2"/>
+  <text x="880" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">
+    <tspan x="880" dy="0">MF3: Consolidação</tspan>
+    <tspan x="880" dy="20" font-size="11" font-weight="normal" fill="#F3E5F5">16/11 – 15/12/2026</tspan>
+    <tspan x="880" dy="15" font-size="11" font-weight="normal" fill="#F3E5F5">Documentação + Aceite M4</tspan>
+  </text>
+  
+  <!-- Seta MF3 -> M4 -->
+  <line x1="980" y1="130" x2="1000" y2="130" stroke="#1F3A5F" stroke-width="2" marker-end="url(#ar-flow)"/>
+  
+  <!-- Gate M4 -->
+  <polygon points="1020,110 1040,130 1020,150 1000,130" fill="#E67E22" stroke="#E67E22" stroke-width="2"/>
+  <text x="1020" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#E67E22">M4</text>
+  <text x="1020" y="185" text-anchor="middle" font-size="10" fill="#555555">15/12</text>
+
+  <!-- ================= CAMADA INFERIOR: CAMINHO CRÍTICO EMPÍRICO ================= -->
+  <text x="600" y="240" text-anchor="middle" font-size="16" font-weight="bold" fill="#2E7D32">Camada Operacional — Detectores do Caminho Crítico Empírico</text>
+  
+  <!-- Detector 1: Cards P0 -->
+  <rect x="80" y="270" width="220" height="90" rx="6" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+  <text x="190" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">
+    <tspan x="190" dy="0">Cards P0</tspan>
+    <tspan x="190" dy="20" font-size="11" font-weight="normal" fill="#333333">Prioridade temporal</tspan>
+    <tspan x="190" dy="15" font-size="11" font-weight="normal" fill="#333333">crítica do marco</tspan>
+    <tspan x="190" dy="15" font-size="10" font-weight="normal" fill="#555555">(OKB §9.4)</tspan>
+  </text>
+  
+  <!-- Detector 2: Label blocked -->
+  <rect x="330" y="270" width="220" height="90" rx="6" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+  <text x="440" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">
+    <tspan x="440" dy="0">Label blocked</tspan>
+    <tspan x="440" dy="20" font-size="11" font-weight="normal" fill="#333333">Dependência registrada</tspan>
+    <tspan x="440" dy="15" font-size="11" font-weight="normal" fill="#333333">no corpo da Issue</tspan>
+    <tspan x="440" dy="15" font-size="10" font-weight="normal" fill="#555555">(OKB §9.1)</tspan>
+  </text>
+  
+  <!-- Detector 3: Bandas do CFD -->
+  <rect x="580" y="270" width="220" height="90" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+  <text x="690" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">
+    <tspan x="690" dy="0">Bandas do CFD</tspan>
+    <tspan x="690" dy="20" font-size="11" font-weight="normal" fill="#333333">Alargamento &gt; 2×</tspan>
+    <tspan x="690" dy="15" font-size="11" font-weight="normal" fill="#333333">largura média</tspan>
+    <tspan x="690" dy="15" font-size="10" font-weight="normal" fill="#555555">(Integração §1.6.1)</tspan>
+  </text>
+  
+  <!-- Detector 4: Desvio de Cycle Time -->
+  <rect x="830" y="270" width="220" height="90" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
+  <text x="940" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">
+    <tspan x="940" dy="0">Desvio Cycle Time</tspan>
+    <tspan x="940" dy="20" font-size="11" font-weight="normal" fill="#333333">Meta ≤ 3 dias</tspan>
+    <tspan x="940" dy="15" font-size="11" font-weight="normal" fill="#333333">violada persistentemente</tspan>
+    <tspan x="940" dy="15" font-size="10" font-weight="normal" fill="#555555">(ADR-003)</tspan>
+  </text>
+  
+  <!-- Setas convergindo para Refinement (pontos distintos no topo da caixa) -->
+  <line x1="190" y1="360" x2="380" y2="410" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-green)"/>
+  <line x1="440" y1="360" x2="520" y2="410" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-green)"/>
+  <line x1="690" y1="360" x2="620" y2="410" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-green)"/>
+  <line x1="940" y1="360" x2="720" y2="410" stroke="#2E7D32" stroke-width="2" marker-end="url(#ar-green)"/>
+  
+  <!-- Refinement / Replanejamento -->
+  <rect x="330" y="410" width="540" height="80" rx="6" fill="#2E7D32" stroke="#2E7D32" stroke-width="2"/>
+  <text x="600" y="440" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">
+    <tspan x="600" dy="0">Refinement Semanal + Retrospectiva Quinzenal</tspan>
+    <tspan x="600" dy="22" font-size="12" font-weight="normal" fill="#E8F5E9">Decisão de replanejamento e ajuste de prioridades</tspan>
+    <tspan x="600" dy="16" font-size="11" font-weight="normal" fill="#E8F5E9">(sem violar os gates de controle das Macro-Fases)</tspan>
+  </text>
+  
+  <!-- Seta de Feedback Orgânico para a camada macro -->
+  <path d="M 870 450 Q 1100 450 1100 130 L 1040 130" fill="none" stroke="#E67E22" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#ar-feedback)"/>
+  <text x="1110" y="290" font-size="11" font-weight="bold" fill="#E67E22" text-anchor="start">Feedback de</text>
+  <text x="1110" y="305" font-size="11" font-weight="bold" fill="#E67E22" text-anchor="start">Replanejamento</text>
+  
+  <!-- Anotação inferior (Nota Técnica) -->
+  <rect x="100" y="540" width="1000" height="70" rx="6" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="1.5"/>
+  <text x="600" y="565" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">Nota Técnica:</text>
+  <text x="600" y="585" text-anchor="middle" font-size="12" fill="#333333">Caminho crítico identificado empiricamente — sem rede CPM preditiva. Substitui o Gantt/EVM por</text>
+  <text x="600" y="600" text-anchor="middle" font-size="12" fill="#333333">métricas de fluxo Kanban, conforme ADR-003 e OKB §8.1.</text>
+</svg>

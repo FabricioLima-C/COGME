@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="1200" height="470" fill="#FFFFFF"/>
+  <text x="600" y="42" text-anchor="middle" font-size="23" font-weight="bold" fill="#111111">EAP — Macro-Fase 2: Construção (MF2)</text>
+  
+  <!-- N5 -->
+  <g transform="translate(60, 100)">
+    <rect x="-5" y="0" width="245" height="50" rx="4" fill="#FFFFFF" stroke="#2E7D32" stroke-width="2"/>
+    <text x="120" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">N5. Desenvolvimento do Sistema</text>
+    <line x1="120" y1="50" x2="120" y2="80" stroke="#777777" stroke-width="1.5"/>
+    <rect x="-5" y="80" width="245" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="105" text-anchor="middle" font-size="12" fill="#222222">N5.1 Backend — Lógica de Negócio</text>
+    <rect x="-5" y="130" width="245" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="155" text-anchor="middle" font-size="12" fill="#222222">N5.2 Backend — API de Câmbio + Cache</text>
+    <rect x="-5" y="180" width="245" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="205" text-anchor="middle" font-size="12" fill="#222222">N5.3 Frontend — Interface e Simulações</text>
+    <rect x="-5" y="230" width="245" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="255" text-anchor="middle" font-size="12" fill="#222222">N5.4 Módulo PDF (WeasyPrint)</text>
+    <rect x="-5" y="280" width="245" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="305" text-anchor="middle" font-size="12" fill="#222222">N5.5 SDD com IA (Prompts + Revisão)</text>
+  </g>
+
+  <!-- N6 -->
+  <g transform="translate(340, 100)">
+    <rect x="-5" y="0" width="255" height="50" rx="4" fill="#FFFFFF" stroke="#2E7D32" stroke-width="2"/>
+    <text x="120" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">N6. Garantia da Qualidade</text>
+    <line x1="120" y1="50" x2="120" y2="80" stroke="#777777" stroke-width="1.5"/>
+    <rect x="-5" y="80" width="255" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="105" text-anchor="middle" font-size="12" fill="#222222">N6.1 Testes Unitários/Integração (≥ 80%)</text>
+    <rect x="-5" y="130" width="255" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="155" text-anchor="middle" font-size="12" fill="#222222">N6.2 Testes de Aceitação (UAT)</text>
+    <rect x="-5" y="180" width="255" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="205" text-anchor="middle" font-size="12" fill="#222222">N6.3 Ferramentas da Qualidade (12 PDCAs)</text>
+  </g>
+
+  <!-- N7 -->
+  <g transform="translate(620, 100)">
+    <rect x="0" y="0" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#2E7D32" stroke-width="2"/>
+    <text x="120" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">N7. DevOps e CI/CD</text>
+    <line x1="120" y1="50" x2="120" y2="80" stroke="#777777" stroke-width="1.5"/>
+    <rect x="10" y="80" width="220" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="105" text-anchor="middle" font-size="12" fill="#222222">N7.1 Pipeline CI (lint + testes)</text>
+  </g>
+
+  <!-- N10 -->
+  <g transform="translate(900, 100)">
+    <rect x="0" y="0" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#2E7D32" stroke-width="2"/>
+    <text x="120" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">N10. Gestão de Mudanças</text>
+    <line x1="120" y1="50" x2="120" y2="80" stroke="#777777" stroke-width="1.5"/>
+    <rect x="10" y="80" width="220" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="105" text-anchor="middle" font-size="12" fill="#222222">N10.1 Registro de Solicitações</text>
+    <rect x="10" y="130" width="220" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="155" text-anchor="middle" font-size="12" fill="#222222">N10.2 Label change-request no GitHub</text>
+    <rect x="10" y="180" width="220" height="40" rx="4" fill="#F8F9FA" stroke="#555555" stroke-width="1.5"/>
+    <text x="120" y="205" text-anchor="middle" font-size="12" fill="#222222">N10.3 Aprovação e Versionamento</text>
+  </g>
+</svg>

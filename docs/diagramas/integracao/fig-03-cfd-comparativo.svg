@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FIG-3 — CFD: Padrão Saudável vs. Padrão com Gargalo
+  Projeto COGME | Plano de Integração §1.6.1 | Blindagem acadêmica (ausência de Gantt/EVM)
+  Fonte e entregável: este arquivo .svg (padrão aberto W3C, zero dependências).
+  Dados SIMULADOS para fins didáticos. Baseline real: calibração 23/09–03/10 (ADR-003).
+  Geometria: chegadas = 5 cards/sem; painel (b): saída de Code Review = 2 cards/sem a partir de t=3.
+  Paleta: oficial do repositório (§9.1 da base de conhecimento operacional).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="570" viewBox="0 0 1440 570"
+     role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+  <title id="t">Figura 3 — Cumulative Flow Diagram: padrão saudável vs. padrão com gargalo</title>
+  <desc id="d">Painel (a): bandas paralelas e estáveis. Painel (b): alargamento progressivo da banda Code Review com regra de ação corretiva (2× a largura média por 2 semanas).</desc>
+
+  <defs>
+    <marker id="arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#D73A4A"/></marker>
+    <marker id="arrRs" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#D73A4A"/></marker>
+    <marker id="arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#616161"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1440" height="570" fill="#FFFFFF"/>
+
+  <!-- Títulos dos painéis -->
+  <text x="360" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#212121">(a) Fluxo saudável — bandas paralelas e estáveis</text>
+  <text x="1060" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#212121">(b) Gargalo progressivo em Code Review</text>
+
+  <!-- Grade horizontal (painel A) -->
+  <g stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,3">
+    <line x1="80" y1="40" x2="640" y2="40"/>
+    <line x1="80" y1="106.7" x2="640" y2="106.7"/>
+    <line x1="80" y1="173.3" x2="640" y2="173.3"/>
+    <line x1="80" y1="240" x2="640" y2="240"/>
+    <line x1="80" y1="306.7" x2="640" y2="306.7"/>
+    <line x1="80" y1="373.3" x2="640" y2="373.3"/>
+  </g>
+  <!-- Grade horizontal (painel B) -->
+  <g stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,3">
+    <line x1="780" y1="40" x2="1340" y2="40"/>
+    <line x1="780" y1="106.7" x2="1340" y2="106.7"/>
+    <line x1="780" y1="173.3" x2="1340" y2="173.3"/>
+    <line x1="780" y1="240" x2="1340" y2="240"/>
+    <line x1="780" y1="306.7" x2="1340" y2="306.7"/>
+    <line x1="780" y1="373.3" x2="1340" y2="373.3"/>
+  </g>
+
+  <!-- ============ PAINEL A — SAUDÁVEL ============ -->
+  <!-- Banda Backlog -->
+  <path d="M80,440 L136,406.7 L192,373.3 L248,340 L304,306.7 L360,273.3 L416,240 L472,206.7 L528,173.3 L584,140 L640,106.7 L640,123.3 L584,156.7 L528,190 L472,223.3 L416,256.7 L360,290 L304,323.3 L248,356.7 L192,390 L136,423.3 L80,440 Z"
+        fill="#E0E0E0" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda Ready (DoR) -->
+  <path d="M80,440 L136,423.3 L192,390 L248,356.7 L304,323.3 L360,290 L416,256.7 L472,223.3 L528,190 L584,156.7 L640,123.3 L640,140 L584,173.3 L528,206.7 L472,240 L416,273.3 L360,306.7 L304,340 L248,373.3 L192,406.7 L136,440 L80,440 Z"
+        fill="#D4C5F9" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda In Progress -->
+  <path d="M80,440 L136,440 L192,406.7 L248,373.3 L304,340 L360,306.7 L416,273.3 L472,240 L528,206.7 L584,173.3 L640,140 L640,156.7 L584,190 L528,223.3 L472,256.7 L416,290 L360,323.3 L304,356.7 L248,390 L192,423.3 L136,440 L80,440 Z"
+        fill="#1D76DB" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda Code Review -->
+  <path d="M80,440 L136,440 L192,423.3 L248,390 L304,356.7 L360,323.3 L416,290 L472,256.7 L528,223.3 L584,190 L640,156.7 L640,173.3 L584,206.7 L528,240 L472,273.3 L416,306.7 L360,340 L304,373.3 L248,406.7 L192,440 L136,440 L80,440 Z"
+        fill="#FBCA04" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Linha Done (DoD) -->
+  <path d="M80,440 L136,440 L192,440 L248,406.7 L304,373.3 L360,340 L416,306.7 L472,273.3 L528,240 L584,206.7 L640,173.3"
+        fill="none" stroke="#0E8A16" stroke-width="3.5"/>
+  <!-- Linha de chegadas (tracejada) -->
+  <path d="M80,440 L136,406.7 L192,373.3 L248,340 L304,306.7 L360,273.3 L416,240 L472,206.7 L528,173.3 L584,140 L640,106.7"
+        fill="none" stroke="#212121" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ============ PAINEL B — GARGALO ============ -->
+  <!-- Banda Backlog -->
+  <path d="M780,440 L836,406.7 L892,373.3 L948,340 L1004,306.7 L1060,273.3 L1116,240 L1172,206.7 L1228,173.3 L1284,140 L1340,106.7 L1340,123.3 L1284,156.7 L1228,190 L1172,223.3 L1116,256.7 L1060,290 L1004,323.3 L948,356.7 L892,390 L836,423.3 L780,440 Z"
+        fill="#E0E0E0" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda Ready (DoR) -->
+  <path d="M780,440 L836,423.3 L892,390 L948,356.7 L1004,323.3 L1060,290 L1116,256.7 L1172,223.3 L1228,190 L1284,156.7 L1340,123.3 L1340,140 L1284,173.3 L1228,206.7 L1172,240 L1116,273.3 L1060,306.7 L1004,340 L948,373.3 L892,406.7 L836,440 L780,440 Z"
+        fill="#D4C5F9" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda In Progress -->
+  <path d="M780,440 L836,440 L892,406.7 L948,373.3 L1004,340 L1060,306.7 L1116,273.3 L1172,240 L1228,206.7 L1284,173.3 L1340,140 L1340,156.7 L1284,190 L1228,223.3 L1172,256.7 L1116,290 L1060,323.3 L1004,356.7 L948,390 L892,423.3 L836,440 L780,440 Z"
+        fill="#1D76DB" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Banda Code Review (alargamento progressivo a partir de t=3) -->
+  <path d="M780,440 L836,440 L892,423.3 L948,390 L1004,356.7 L1060,323.3 L1116,290 L1172,256.7 L1228,223.3 L1284,190 L1340,156.7 L1340,333.3 L1284,346.7 L1228,360 L1172,373.3 L1116,386.7 L1060,400 L1004,413.3 L948,426.7 L892,440 L836,440 L780,440 Z"
+        fill="#FBCA04" stroke="#FFFFFF" stroke-width="1.5"/>
+  <!-- Linha Done (DoD) — estagnada -->
+  <path d="M780,440 L836,440 L892,440 L948,426.7 L1004,413.3 L1060,400 L1116,386.7 L1172,373.3 L1228,360 L1284,346.7 L1340,333.3"
+        fill="none" stroke="#0E8A16" stroke-width="3.5"/>
+  <!-- Linha de chegadas (tracejada) -->
+  <path d="M780,440 L836,406.7 L892,373.3 L948,340 L1004,306.7 L1060,273.3 L1116,240 L1172,206.7 L1228,173.3 L1284,140 L1340,106.7"
+        fill="none" stroke="#212121" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ============ ANOTAÇÕES ============ -->
+  <!-- Painel A: fluxo saudável -->
+  <rect x="100" y="55" width="320" height="64" rx="8" fill="#F5F5F5" stroke="#616161" stroke-width="1.5"/>
+  <text x="114" y="76" font-size="13" font-weight="bold" fill="#212121">FLUXO SAUDÁVEL</text>
+  <text x="114" y="94" font-size="12" fill="#424242">Bandas paralelas de largura constante</text>
+  <text x="114" y="110" font-size="12" fill="#424242">(WIP estável — Cycle Time ≤ 3 dias)</text>
+  <line x1="350" y1="119" x2="410" y2="272" stroke="#616161" stroke-width="1.5" marker-end="url(#arrG)"/>
+
+  <!-- Painel B: gargalo + regra de ação corretiva -->
+  <rect x="800" y="50" width="420" height="80" rx="8" fill="#FFFFFF" stroke="#D73A4A" stroke-width="2"/>
+  <text x="814" y="72" font-size="13" font-weight="bold" fill="#D73A4A">GARGALO DETECTADO — REGRA DE AÇÃO CORRETIVA</text>
+  <text x="814" y="90" font-size="12" fill="#424242">Banda Code Review &gt; 2× a largura média das demais</text>
+  <text x="814" y="106" font-size="12" fill="#424242">por 2 semanas consecutivas → acionar Retrospectiva</text>
+  <text x="814" y="122" font-size="12" fill="#424242">extraordinária (ADR-002 / ADR-003)</text>
+  <line x1="1150" y1="130" x2="1276" y2="186" stroke="#D73A4A" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Marcador de largura da banda em t=9 -->
+  <line x1="1300" y1="190" x2="1300" y2="346.7" stroke="#D73A4A" stroke-width="2"
+        marker-start="url(#arrRs)" marker-end="url(#arrR)"/>
+  <rect x="1176" y="258" width="116" height="34" fill="#FFFFFF" stroke="#D73A4A" stroke-width="1"/>
+  <text x="1182" y="272" font-size="11" font-weight="bold" fill="#D73A4A">≈ 23 cards</text>
+  <text x="1182" y="286" font-size="11" fill="#D73A4A">(≈ 9× a média)</text>
+
+  <!-- ============ EIXOS E MOLDURAS ============ -->
+  <g stroke="#757575" stroke-width="1.5" fill="none">
+    <rect x="80" y="40" width="560" height="400"/>
+    <rect x="780" y="40" width="560" height="400"/>
+  </g>
+  <!-- Rótulos do eixo Y (painel A) -->
+  <g font-size="12" fill="#424242" text-anchor="end">
+    <text x="70" y="444">0</text>
+    <text x="70" y="377">10</text>
+    <text x="70" y="311">20</text>
+    <text x="70" y="244">30</text>
+    <text x="70" y="177">40</text>
+    <text x="70" y="111">50</text>
+    <text x="70" y="44">60</text>
+  </g>
+  <text transform="rotate(-90 30 240)" x="30" y="240" font-size="13" fill="#424242" text-anchor="middle">Cards cumulativos</text>
+  <!-- Rótulos do eixo X -->
+  <g font-size="12" fill="#424242" text-anchor="middle">
+    <text x="80" y="460">0</text><text x="136" y="460">1</text><text x="192" y="460">2</text>
+    <text x="248" y="460">3</text><text x="304" y="460">4</text><text x="360" y="460">5</text>
+    <text x="416" y="460">6</text><text x="472" y="460">7</text><text x="528" y="460">8</text>
+    <text x="584" y="460">9</text><text x="640" y="460">10</text>
+    <text x="780" y="460">0</text><text x="836" y="460">1</text><text x="892" y="460">2</text>
+    <text x="948" y="460">3</text><text x="1004" y="460">4</text><text x="1060" y="460">5</text>
+    <text x="1116" y="460">6</text><text x="1172" y="460">7</text><text x="1228" y="460">8</text>
+    <text x="1284" y="460">9</text><text x="1340" y="460">10</text>
+  </g>
+  <text x="360" y="482" font-size="13" fill="#424242" text-anchor="middle">Tempo (semanas)</text>
+  <text x="1060" y="482" font-size="13" fill="#424242" text-anchor="middle">Tempo (semanas)</text>
+
+  <!-- ============ LEGENDA ============ -->
+  <g font-size="13" fill="#212121">
+    <rect x="170" y="504" width="20" height="14" fill="#E0E0E0" stroke="#9E9E9E"/>
+    <text x="196" y="516">Backlog</text>
+    <rect x="300" y="504" width="20" height="14" fill="#D4C5F9" stroke="#9E9E9E"/>
+    <text x="326" y="516">Ready (DoR)</text>
+    <rect x="460" y="504" width="20" height="14" fill="#1D76DB" stroke="#9E9E9E"/>
+    <text x="486" y="516">In Progress</text>
+    <rect x="620" y="504" width="20" height="14" fill="#FBCA04" stroke="#9E9E9E"/>
+    <text x="646" y="516">Code Review</text>
+    <line x1="790" y1="511" x2="814" y2="511" stroke="#0E8A16" stroke-width="4"/>
+    <text x="820" y="516">Done (DoD)</text>
+    <line x1="950" y1="511" x2="974" y2="511" stroke="#212121" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="980" y="516">Chegadas (input)</text>
+  </g>
+
+  <!-- Rodapé de honestidade intelectual -->
+  <text x="720" y="550" font-size="11" font-style="italic" fill="#616161" text-anchor="middle">Dados simulados para fins didáticos — a baseline real será coletada no período de calibração (23/09 a 03/10/2026) via GitHub Insights, conforme ADR-003.</text>
+</svg>

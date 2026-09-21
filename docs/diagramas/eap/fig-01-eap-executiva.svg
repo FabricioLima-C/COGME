@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 780" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#333333"/>
+    </marker>
+  </defs>
+  
+  <!-- Fundo Branco -->
+  <rect x="0" y="0" width="1600" height="780" fill="#FFFFFF"/>
+  
+  <!-- Título Principal -->
+  <text x="800" y="40" text-anchor="middle" font-size="23" font-weight="bold" fill="#111111">EAP COGME — Visão Executiva (12 Fases | 3 Macro-Fases | 37 Pacotes)</text>
+
+  <!-- ========================================== -->
+  <!-- CAMADA 0: RAIZ (N0) E TRONCO CENTRAL       -->
+  <!-- ========================================== -->
+  <g id="camada-0-raiz">
+    <rect x="500" y="70" width="600" height="50" rx="6" fill="#1F3A5F" stroke="#111111" stroke-width="2"/>
+    <text x="800" y="102" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">N0: COGME — Conversor de Ganhos em Moeda Estrangeira</text>
+    
+    <!-- Tronco Central (Espinha Dorsal da EAP) -->
+    <line x1="800" y1="120" x2="800" y2="720" stroke="#333333" stroke-width="2"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CAMADA 1: MACRO-FASES (FAIXAS HORIZONTAIS) -->
+  <!-- ========================================== -->
+  <g id="camada-1-macro-fases">
+    <!-- MF1: Fundação -->
+    <rect x="40" y="150" width="1520" height="160" rx="8" fill="#E8F0FE" fill-opacity="0.3" stroke="#1F3A5F" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="60" y="175" font-size="16" font-weight="bold" fill="#1F3A5F">MF1: Fundação (14 pacotes)</text>
+    
+    <!-- MF2: Construção -->
+    <rect x="40" y="340" width="1520" height="160" rx="8" fill="#FEF9E7" fill-opacity="0.3" stroke="#B7950B" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="60" y="365" font-size="16" font-weight="bold" fill="#B7950B">MF2: Construção (15 pacotes)</text>
+    
+    <!-- MF3: Consolidação -->
+    <rect x="40" y="530" width="1520" height="160" rx="8" fill="#E8F8F5" fill-opacity="0.3" stroke="#117A65" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="60" y="555" font-size="16" font-weight="bold" fill="#117A65">MF3: Consolidação (8 pacotes)</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CAMADA 2: CONEXÕES (BARRAMENTOS E RAMIFICAÇÕES) -->
+  <!-- ========================================== -->
+  <g id="camada-2-conexoes" stroke="#333333" stroke-width="2" fill="none">
+    <!-- Barramento MF1 -->
+    <line x1="245" y1="190" x2="1355" y2="190"/>
+    <line x1="245" y1="190" x2="245" y2="206" marker-end="url(#ar)"/>
+    <line x1="615" y1="190" x2="615" y2="206" marker-end="url(#ar)"/>
+    <line x1="985" y1="190" x2="985" y2="206" marker-end="url(#ar)"/>
+    <line x1="1355" y1="190" x2="1355" y2="206" marker-end="url(#ar)"/>
+
+    <!-- Barramento MF2 -->
+    <line x1="245" y1="380" x2="1355" y2="380"/>
+    <line x1="245" y1="380" x2="245" y2="396" marker-end="url(#ar)"/>
+    <line x1="615" y1="380" x2="615" y2="396" marker-end="url(#ar)"/>
+    <line x1="985" y1="380" x2="985" y2="396" marker-end="url(#ar)"/>
+    <line x1="1355" y1="380" x2="1355" y2="396" marker-end="url(#ar)"/>
+
+    <!-- Barramento MF3 -->
+    <line x1="245" y1="570" x2="1355" y2="570"/>
+    <line x1="245" y1="570" x2="245" y2="586" marker-end="url(#ar)"/>
+    <line x1="615" y1="570" x2="615" y2="586" marker-end="url(#ar)"/>
+    <line x1="985" y1="570" x2="985" y2="586" marker-end="url(#ar)"/>
+    <line x1="1355" y1="570" x2="1355" y2="586" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- CAMADA 3: FASES (CAIXAS DE NÍVEL 1)        -->
+  <!-- ========================================== -->
+  <g id="camada-3-fases">
+    <!-- MF1 Fases -->
+    <g class="fase-box">
+      <rect x="85" y="210" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+      <text x="245" y="245" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N1 — Iniciação e Planejamento</text>
+      <text x="245" y="270" text-anchor="middle" font-size="13" fill="#555555">(5 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="455" y="210" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+      <text x="615" y="245" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N2 — Levantamento de Requisitos</text>
+      <text x="615" y="270" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="825" y="210" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+      <text x="985" y="245" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N3 — Modelagem e Prototipação</text>
+      <text x="985" y="270" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="1195" y="210" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+      <text x="1355" y="245" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N4 — Design de Banco de Dados e API</text>
+      <text x="1355" y="270" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+
+    <!-- MF2 Fases -->
+    <g class="fase-box">
+      <rect x="85" y="400" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#B7950B" stroke-width="2"/>
+      <text x="245" y="435" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N5 — Desenvolvimento do Sistema</text>
+      <text x="245" y="460" text-anchor="middle" font-size="13" fill="#555555">(5 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="455" y="400" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#B7950B" stroke-width="2"/>
+      <text x="615" y="435" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N6 — Integração de APIs Externas</text>
+      <text x="615" y="460" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="825" y="400" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#B7950B" stroke-width="2"/>
+      <text x="985" y="435" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N7 — Implementação de Testes Automatizados</text>
+      <text x="985" y="460" text-anchor="middle" font-size="13" fill="#555555">(4 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="1195" y="400" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#B7950B" stroke-width="2"/>
+      <text x="1355" y="435" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N8 — Refatoração e Otimização</text>
+      <text x="1355" y="460" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+
+    <!-- MF3 Fases -->
+    <g class="fase-box">
+      <rect x="85" y="590" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#117A65" stroke-width="2"/>
+      <text x="245" y="625" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N9 — Documentação Técnica e Usuário</text>
+      <text x="245" y="650" text-anchor="middle" font-size="13" fill="#555555">(3 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="455" y="590" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#117A65" stroke-width="2"/>
+      <text x="615" y="625" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N10 — Homologação e UAT</text>
+      <text x="615" y="650" text-anchor="middle" font-size="13" fill="#555555">(2 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="825" y="590" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#117A65" stroke-width="2"/>
+      <text x="985" y="625" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N11 — Deploy e CI/CD</text>
+      <text x="985" y="650" text-anchor="middle" font-size="13" fill="#555555">(2 pacotes)</text>
+    </g>
+    <g class="fase-box">
+      <rect x="1195" y="590" width="320" height="80" rx="6" fill="#FFFFFF" stroke="#117A65" stroke-width="2"/>
+      <text x="1355" y="625" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">N12 — Encerramento e Lições Aprendidas</text>
+      <text x="1355" y="650" text-anchor="middle" font-size="13" fill="#555555">(1 pacote)</text>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- RODAPÉ ABNT (NBR 14724)                    -->
+  <!-- ========================================== -->
+  <g id="rodape-abnt">
+    <text x="800" y="740" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Figura 1 — EAP do COGME: Visão Executiva (12 Fases | 3 Macro-Fases | 37 Pacotes)</text>
+    <text x="800" y="760" text-anchor="middle" font-size="12" font-style="italic" fill="#555555">Fonte: Elaborado pelos autores (2026) com base no TAP §4 e OKB v3.1.</text>
+  </g>
+</svg>

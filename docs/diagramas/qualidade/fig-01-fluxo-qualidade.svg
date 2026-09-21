@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1140" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#111111"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="1140" fill="#FFFFFF"/>
+  <text x="685" y="34" text-anchor="middle" font-size="23" font-weight="bold" fill="#111111">Fluxo de Garantia da Qualidade — COGME</text>
+
+  <!-- arestas (hastes) -->
+  <g stroke="#333333" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+    <line x1="430" y1="93"  x2="430" y2="142"/>                 <!-- A->B -->
+    <line x1="430" y1="238" x2="430" y2="287"/>                 <!-- B->C (SIM) -->
+    <line x1="610" y1="190" x2="770" y2="297"/>                 <!-- B->D (NAO) -->
+    <line x1="590" y1="320" x2="700" y2="320"/>                 <!-- C->D -->
+    <line x1="850" y1="343" x2="500" y2="417"/>                 <!-- D->E -->
+    <line x1="430" y1="483" x2="430" y2="532"/>                 <!-- E->F -->
+    <line x1="610" y1="580" x2="700" y2="580"/>                 <!-- F->G (NAO) -->
+    <line x1="430" y1="628" x2="430" y2="662"/>                 <!-- F->H (SIM) -->
+    <line x1="610" y1="710" x2="690" y2="710"/>                 <!-- H->I (NAO) -->
+    <line x1="430" y1="758" x2="430" y2="792"/>                 <!-- H->J (SIM) -->
+    <line x1="610" y1="840" x2="700" y2="840"/>                 <!-- J->K (NAO) -->
+    <line x1="430" y1="888" x2="430" y2="922"/>                 <!-- J->L (SIM) -->
+    <line x1="610" y1="962" x2="700" y2="962"/>                 <!-- L->M (NAO) -->
+    <line x1="430" y1="1018" x2="430" y2="1057"/>               <!-- L->N (SIM) -->
+    <!-- retornos (acoes corretivas -> re-trabalho) -->
+    <path d="M850,557 L850,500 L700,500 L700,440 L590,440"/>    <!-- G->E -->
+    <path d="M1010,710 L1090,710 L1090,460 L590,460"/>          <!-- I->E -->
+    <path d="M1000,840 L1130,840 L1130,320 L1000,320"/>         <!-- K->D -->
+    <line x1="700" y1="978" x2="610" y2="978"/>                 <!-- M->L -->
+  </g>
+
+  <!-- etiquetas SIM / NAO -->
+  <g font-size="12" fill="#333333">
+    <text x="446" y="266" text-anchor="start">SIM</text>
+    <text x="648" y="240" text-anchor="middle">NAO</text>
+    <text x="655" y="572" text-anchor="middle">NAO</text>
+    <text x="446" y="648" text-anchor="start">SIM</text>
+    <text x="650" y="702" text-anchor="middle">NAO</text>
+    <text x="446" y="778" text-anchor="start">SIM</text>
+    <text x="655" y="832" text-anchor="middle">NAO</text>
+    <text x="446" y="908" text-anchor="start">SIM</text>
+    <text x="655" y="954" text-anchor="middle">NAO</text>
+    <text x="446" y="1040" text-anchor="start">SIM</text>
+  </g>
+
+  <!-- nos de processo (azul) -->
+  <g font-size="13" fill="#111111" text-anchor="middle">
+    <rect x="280" y="47"  width="300" height="46" rx="4" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="75">Card em In Progress</text>
+
+    <rect x="270" y="287" width="320" height="66" rx="4" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="314">Revisao humana<tspan x="430" dy="15">obrigatoria</tspan></text>
+
+    <rect x="700" y="297" width="300" height="46" rx="4" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="850" y="325">Implementacao direta</text>
+
+    <rect x="270" y="417" width="320" height="66" rx="4" fill="#FFFFFF" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="444">Tests escritos<tspan x="430" dy="15">(TDD quando aplicavel)</tspan></text>
+  </g>
+
+  <!-- nos de decisao (losango, cinza-azulado) -->
+  <g font-size="13" fill="#111111" text-anchor="middle">
+    <polygon points="430,142 610,190 430,238 250,190" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="185">Codigo gerado<tspan x="430" dy="15">com SDD-IA?</tspan></text>
+
+    <polygon points="430,532 610,580 430,628 250,580" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="575">Pipeline CI<tspan x="430" dy="15">verde?</tspan></text>
+
+    <polygon points="430,662 610,710 430,758 250,710" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="705">Coverage &#8805; 80%<tspan x="430" dy="15">no modulo?</tspan></text>
+
+    <polygon points="430,792 610,840 430,888 250,840" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="835">Code Review<tspan x="430" dy="15">aprovado?</tspan></text>
+
+    <polygon points="430,922 610,970 430,1018 250,970" fill="#F4F6F8" stroke="#1F3A5F" stroke-width="2"/>
+    <text x="430" y="965">Tasklist 100%<tspan x="430" dy="15">concluida?</tspan></text>
+  </g>
+
+  <!-- nos de acao corretiva (vermelho suave) -->
+  <g font-size="13" fill="#111111" text-anchor="middle">
+    <rect x="700" y="557" width="300" height="46" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+    <text x="850" y="585">Correcao imediata</text>
+
+    <rect x="690" y="677" width="320" height="66" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+    <text x="850" y="704">Escrever testes<tspan x="850" dy="15">adicionais</tspan></text>
+
+    <rect x="700" y="817" width="300" height="46" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+    <text x="850" y="845">Ajustes solicitados</text>
+
+    <rect x="700" y="947" width="300" height="46" rx="4" fill="#FDECEA" stroke="#C0392B" stroke-width="2"/>
+    <text x="850" y="975">Completar itens</text>
+  </g>
+
+  <!-- no final (exito, verde) -->
+  <rect x="270" y="1057" width="320" height="46" rx="4" fill="#1E7E34" stroke="#1E7E34" stroke-width="2"/>
+  <text x="430" y="1085" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">Card Done — DoD atendido</text>
+</svg>
