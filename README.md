@@ -1,451 +1,343 @@
 # COGME — Conversor de Ganhos em Moeda Estrangeira
 
-> **Status:** 🟡 Macro-Fase 1 (Fundação) — Pré-M1 (22/09/2026)
-> **Licença:** MIT (100% FOSS)
-> **Governança:** PMBOK 7ª (princípios/domínios) + PMBOK 6ª (dicionário) + Kanban (execução)
-> **Contexto:** Fatec Taquaritinga — ADS | Disciplina de Gerência de Projetos
-> **Avaliador Acadêmico:** Prof. Dr. Nivaldo Carleto
+> Simulação cambial completa, comparação entre regimes de contratação e emissão de invoices em PDF — 100% FOSS, 100% gratuito.
+
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Coverage](https://img.shields.io/badge/Coverage-≥80%25-brightgreen)](tests/)
+[![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)](.github/workflows/ci.yml)
+[![Kanban](https://img.shields.io/badge/Método-Kanban-FF6F00)](https://github.com/users/Leonardo-Setti/projects)
+[![PMBOK](https://img.shields.io/badge/Governança-PMBOK%207ª%20+6ª-1565C0)](docs/tap/TAP.md)
+[![Orçamento](https://img.shields.io/badge/Orçamento-R$%200,00-2E7D32)](docs/planos/plano-custos.md)
+[![FOSS](https://img.shields.io/badge/Stack-100%25%20FOSS-0E8A16)](docs/decisoes/ADR-001-stack.md)
 
 ---
 
-## 🎯 Objetivo
+## Sobre o Projeto
 
-O **COGME** é um sistema web full-stack, desenvolvido do zero e 100% FOSS, que resolve uma dor concreta de profissionais brasileiros que recebem em moeda estrangeira: a **falta de uma ferramenta única, gratuita e auditável** para simular conversões cambiais, comparar regimes de contratação e emitir invoices em PDF com rastreabilidade.
+O **COGME** é um projeto acadêmico desenvolvido na disciplina de **Gerência de Projetos** do curso de **Análise e Desenvolvimento de Sistemas** da **Fatec Taquaritinga**.
 
-### Objetivos SMART (TAP v3 §3)
+O cenário: um contingente crescente de profissionais brasileiros atua como PJ ou freelancer para empresas nos EUA, Europa e demais mercados que remuneram em moeda estrangeira (USD/EUR). A gestão financeira desses ganhos exige consultar múltiplos sites, planilhas manuais e calculadoras dispersas — um processo moroso, suscetível a erros e sem visão consolidada.
 
-| Categoria            | Declaração                                                                                                                                 | Meta                                              |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| **Produto**    | MVP funcional com simulação cambial em tempo real, 5 regimes de contratação, encargos simulados (spread + IOF) e emissão de invoice PDF | Resposta ≤ 3s (95% das requisições)            |
-| **Qualidade**  | Cobertura de testes automatizados (unitários + integração) e UAT dos fluxos críticos                                                     | ≥ 80% coverage; zero defeitos críticos          |
-| **Cronograma** | Entrega parcial documental (M1) e MVP funcional (M3)                                                                                         | M1: 22/09/2026 · M3: 15/11/2026                  |
-| **Métricas**  | Métricas de fluxo Kanban via GitHub Insights                                                                                                | Cycle Time ≤ 3 dias · Throughput ≥ 5 cards/sem |
-| **Inovação** | Ciclo de vida 100% FOSS + SDD com IA generativa auditável                                                                                   | 100% dependências OSI-approved                   |
+O COGME preenche essa lacuna: uma solução única, gratuita e de código aberto que reúne simulação cambial completa, comparação entre regimes de contratação e emissão de documentos financeiros associados.
 
----
+### Objetivos SMART
 
-## 📦 Escopo
-
-### MVP — Entregas Obrigatórias (TAP v3 §5 + EAP v2.0)
-
-| ID     | Requisito                                                        | Critério de Aceite                            | Fase EAP |
-| ------ | ---------------------------------------------------------------- | ---------------------------------------------- | -------- |
-| REQ-01 | Simulação cambial em tempo real (USD/EUR → BRL)               | Cotação via API externa, latência ≤ 2s     | N5.2     |
-| REQ-02 | 5 regimes de contratação (hora, dia, semana, mês, valor fixo) | 100% operacionais em UAT                       | N5.1     |
-| REQ-03 | Encargos financeiros simulados (spread + IOF)                    | Precisão de 2 casas decimais, auditável      | N5.1     |
-| REQ-04 | Emissão de invoice em PDF                                       | WeasyPrint, ≤ 3s por documento                | N5.4     |
-| REQ-05 | Tempo de resposta da aplicação                                 | ≤ 3s em 95% das requisições                 | N5.1     |
-| REQ-06 | Interface web responsiva (FOSS)                                  | Chrome/Firefox/Edge (últimas 2 versões)      | N5.3     |
-| REQ-07 | Cache de cotações (SQLite)                                     | Redução ≥ 50% das chamadas à API           | N5.2     |
-| REQ-08 | Testes automatizados                                             | ≥ 80% coverage (pytest + coverage.py)         | N6.1     |
-| REQ-09 | Testes de aceitação (UAT)                                      | 100% fluxos críticos, zero defeitos críticos | N6.2     |
-| REQ-10 | Ferramentas da qualidade                                         | 12 PDCAs + Ishikawa 6M documentados            | N6.3     |
-| REQ-11 | Pipeline CI                                                      | Lint + testes ≤ 5 min por push                | N7.1     |
-| REQ-12 | ADRs de arquitetura                                              | Mínimo 3 ADRs registradas                     | N9.1     |
-| REQ-13 | Rastreabilidade de prompts SDD                                   | 100% catalogados em`.ai/handoffs/`           | N9.3     |
-| REQ-14 | Documentação técnica                                          | Arquitetura + APIs (OpenAPI) aprovadas         | N11.1    |
-| REQ-15 | Conformidade FOSS                                                | 100% dependências OSI-approved                | N4.4     |
-
-### Fora do Escopo (MVP)
-
-- ❌ Cadastro de múltiplos usuários / autenticação avançada
-- ❌ Integração com plataformas de transferência (Wise, Payoneer etc.)
-- ❌ Relatórios gerenciais avançados / BI
-- ❌ Aplicativo mobile nativo
-- ❌ Suporte a criptomoedas
-- ❌ Deploy em produção (MVP roda em homologação local)
-
-> **Nota:** Itens fora do escopo podem ser incorporados via processo formal de Gestão de Mudanças (Fase N10 da EAP), com aprovação do CCB (GP — membro único, TAP v3 §1.c).
+| Objetivo | Meta | Prazo |
+|---|---|---|
+| **Produto** | MVP funcional com simulação cambial, 5 regimes, spread/IOF e invoice PDF | M3 (15/11/2026) |
+| **Qualidade** | Cobertura de testes ≥ 80%, UAT sem defeitos críticos | M3 (15/11/2026) |
+| **Inovação** | Stack 100% FOSS + SDD com IA generativa local | M2 (30/09/2026) |
+| **Cronograma** | Entrega dentro do prazo letivo | M4 (15/12/2026) |
+| **Documentação** | Consolidação completa + validação acadêmica | M4 (15/12/2026) |
 
 ---
 
-## 🏗️ Stack Tecnológica (ADR-001 — Aprovada 19/09/2026)
+## Equipe
 
-| Camada         | Tecnologia                 | Licença               |
-| -------------- | -------------------------- | ---------------------- |
-| Backend        | Python 3.11 + FastAPI      | PSF / MIT              |
-| Banco de Dados | SQLite                     | Public Domain          |
-| Geração PDF  | WeasyPrint                 | BSD-3-Clause           |
-| Frontend       | HTML5 + CSS3 + JS vanilla  | —                     |
-| Testes         | pytest + coverage.py       | MIT / Apache 2.0       |
-| CI/CD          | GitHub Actions (Free Tier) | Proprietário gratuito |
-| Container      | Docker                     | Apache 2.0             |
-| LLM (SDD)      | QwenStudio                 | Autorizada             |
-
-**Trade-offs aceitos (ADR-001):**
-
-- Simplicidade (KISS) > Performance extrema
-- SQLite > PostgreSQL (complexidade desnecessária para MVP acadêmico)
-- JS vanilla > React/Vue (redução de dependências e curva de aprendizado)
+| Papel | Nome | Responsabilidade |
+|---|---|---|
+| **Gerente de Projeto** | Leonardo David Silva Setti | Decisor operacional único, CCB, arquitetura, integração |
+| **Desenvolvedor** | Fabricio de Lima Cabral | Escopo, cronograma, custos, backend |
+| **Desenvolvedor** | Edson Luis Silva | Qualidade, testes, UAT, Ishikawa/PDCA |
+| **Stakeholder-Avaliador** | Prof. Dr. Nivaldo Carleto | Avaliação acadêmica nos marcos M1–M4 |
 
 ---
 
-## 📅 Marcos do Projeto (TAP v3 §7)
+## Governança
 
-| ID | Marco                      | Data                 | Entregável                                |
-| -- | -------------------------- | -------------------- | ------------------------------------------ |
-| M1 | Entrega Parcial Documental | **22/09/2026** | TAP + 5 Planos + 12 PDCAs + Ishikawa       |
-| M2 | Ambiente e Modelação     | **30/09/2026** | Stack validada, CI verde, DER + Protótipo |
-| M3 | MVP Funcional (Beta)       | **15/11/2026** | Full-stack operacional, ≥ 80% coverage    |
-| M4 | Encerramento e Aceite      | **15/12/2026** | Documentação consolidada + release final |
-
----
-
-## 🔄 Metodologia
+O projeto adota um **modelo híbrido trifásico** declarado no [Termo de Abertura do Projeto](docs/tap/TAP.md):
 
 ```
-Governança:  PMBOK 7ª (12 princípios + 8 domínios)
-             PMBOK 6ª (dicionário complementar — obsolescência assumida)
-Execução:    Kanban via GitHub Projects (SSOT)
-Desenvolvimento: SDD com IA generativa auditável
+┌─────────────────────────────────────────────────┐
+│  PMBOK® 7ª Edição                               │  ← Governança primária
+│  12 Princípios + 8 Domínios de Desempenho       │     (por que / para quê)
+├─────────────────────────────────────────────────┤
+│  PMBOK® 6ª Edição                               │  ← Dicionário complementar
+│  Processos como vocabulário estrutural          │     (obsolescência assumida
+│  EVM/SPI/CPI = LEGADO                           │      para métricas preditivas)
+├─────────────────────────────────────────────────┤
+│  Manifesto Ágil + Kanban (GitHub Projects)      │  ← Método de execução
+│  Fluxo contínuo, WIP limits, métricas de fluxo  │     (como o trabalho flui)
+└─────────────────────────────────────────────────┘
 ```
 
-**Fluxo Kanban (ADR-002):**
-`Backlog` → `Ready (DoR)` → `In Progress` → `Code Review` → `Done (DoD)`
+### Método de Execução
 
-**Métricas oficiais (ADR-003):** Cycle Time · Throughput · CFD · WIP · Coverage
-**Métricas LEGADO (não aplicáveis):** ~~SPI~~ · ~~CPI~~ · ~~EVM~~ (orçamento zero inviabiliza)
+- **Ferramenta SSOT:** [GitHub Projects](https://github.com/users/Leonardo-Setti/projects) — Kanban com fluxo contínuo (sem sprints)
+- **Colunas:** `Backlog` → `Ready (DoR)` → `In Progress` → `Code Review` → `Done (DoD)`
+- **WIP Limit:** 3 cards por pessoa em `In Progress`
+- **Métricas:** Cycle Time (≤ 3 dias), Throughput (≥ 5 cards/semana), CFD
+- **Rituais:** Daily assíncrona (15min), Refinement semanal (30min), Retrospectiva quinzenal (30min)
+
+### Decisões Arquiteturais (ADRs)
+
+| ADR | Decisão | Status |
+|---|---|---|
+| [ADR-001](docs/decisoes/ADR-001-stack.md) | Stack tecnológica FOSS | ✅ Aprovada |
+| [ADR-002](docs/decisoes/ADR-002-kanban.md) | Kanban como método de execução | ✅ Aprovada |
+| [ADR-003](docs/decisoes/ADR-003-metricas.md) | Métricas de fluxo (substituição de EVM) | ✅ Aprovada |
+| [ADR-004](docs/decisoes/ADR-004-tasklists.md) | Tasklists Markdown (rejeição de subissues) | ✅ Aprovada |
+| [ADR-005](docs/decisoes/ADR-005-freeze.md) | Regime de freeze do TAP | ⏳ Antes do M2 |
 
 ---
 
-## 👥 Equipe
+## Roadmap e Marcos
 
-| Membro                     | Papel                                         |
-| -------------------------- | --------------------------------------------- |
-| Leonardo David Silva Setti | Gerente de Projeto (GP) + CCB (membro único) |
-| Fabricio de Lima Cabral    | Desenvolvedor                                 |
-| Edson Luis Silva           | Desenvolvedor                                 |
+| Marco | Data | Entregável | Status |
+|---|---|---|---|
+| **M1** — Entrega Parcial Documental | 22/09/2026 | TAP + 5 planos (Integração, Escopo, Cronograma, Custos, Qualidade) + 12 PDCAs + Ishikawa | ✅ |
+| **M2** — Ambiente e Modelagem | 30/09/2026 | Stack validada, CI configurado, DER, Protótipo UX/UI, 3 planos restantes | ⏳ |
+| **Calibração** — Baseline de Métricas | 03/10/2026 | Baseline empírica de fluxo Kanban | ⏳ |
+| **M3** — MVP Funcional (Beta) | 15/11/2026 | Código full-stack, coverage ≥ 80%, UAT aprovado | ⏳ |
+| **M4** — Encerramento e Aceite | 15/12/2026 | Documentação consolidada, validação acadêmica, release final | ⏳ |
+
+### Macro-Fases da EAP
+
+```
+MF1: Fundação (01/09 – 30/09)     → N1, N2, N3, N4, N8, N9
+MF2: Construção (01/10 – 15/11)   → N5, N6, N7, N10
+MF3: Consolidação (16/11 – 15/12) → N11, N12
+```
+
+**EAP:** 12 fases de Nível 1 + 37 pacotes de Nível 2 — [ver diagrama](docs/diagramas/eap/fig-01-eap-executiva.svg)
 
 ---
 
-## 📁 Estrutura do Repositório
+## Stack Tecnológica (100% FOSS)
+
+Definida na [ADR-001](docs/decisoes/ADR-001-stack.md). Orçamento total: **R$ 0,00**.
+
+| Camada | Tecnologia | Licença | Função |
+|---|---|---|---|
+| **Backend** | Python 3.11 + FastAPI | PSF / MIT | API assíncrona |
+| **Banco de Dados** | SQLite 3.x | Public Domain | Cache de cotações + persistência |
+| **Geração de PDF** | WeasyPrint ≥ 59.0 | BSD-3-Clause | Invoices |
+| **Frontend** | HTML5 + HTMX + Tailwind CSS | MIT | Interface responsiva |
+| **Testes** | pytest + coverage.py | MIT | Coverage ≥ 80% |
+| **CI/CD** | GitHub Actions (Free Tier) | Proprietário gratuito | Pipeline automatizado |
+| **SDD Local** | llama.cpp + Qwen 32B + OpenCode | MIT / Autorizada | IA generativa local |
+| **Análise Estática** | mypy (opcional) | MIT | Type safety |
+
+### Conformidade FOSS
+
+Todas as dependências passam por auditoria de licenciamento ([EAP N4.4](docs/dependencias/registro.md)):
+
+- **Whitelist:** MIT, Apache 2.0, BSD, GPL, LGPL, ISC, PSF, Public Domain
+- **Blacklist:** Proprietárias, Shareware, Creative Commons, Source Available não-OSI
+
+---
+
+## Funcionalidades (MVP)
+
+| REQ | Funcionalidade | Critério de Aceite |
+|---|---|---|
+| REQ-01 | Simulação cambial em tempo real (USD/EUR → BRL) | Latência ≤ 2s |
+| REQ-02 | 5 regimes de contratação (hora, dia, semana, mês, valor fixo) | 100% operacionais em UAT |
+| REQ-03 | Encargos financeiros simulados (spread + IOF) | Precisão de 2 casas decimais |
+| REQ-04 | Emissão de invoice em PDF | Geração ≤ 3s via WeasyPrint |
+| REQ-05 | Tempo de resposta | ≤ 3s em 95% das requisições |
+| REQ-06 | Interface web responsiva (FOSS) | Chrome/Firefox/Edge (últimas 2 versões) |
+| REQ-07 | Cache de cotações (SQLite) | Redução ≥ 50% das chamadas à API |
+| REQ-08 | Cobertura de testes | ≥ 80% |
+| REQ-09 | Testes de aceitação (UAT) | Zero defeitos críticos/bloqueantes |
+| REQ-10 | Ferramentas da qualidade | 12 PDCAs + Ishikawa 6M |
+| REQ-11 | Pipeline CI | Lint + testes ≤ 5 min |
+| REQ-12 | ADRs para decisões críticas | Mínimo 3 registradas |
+| REQ-13 | Rastreabilidade de prompts SDD | 100% catalogados em `.ai/handoffs/` |
+| REQ-14 | Documentação técnica | Arquitetura + APIs aprovadas |
+| REQ-15 | Licenciamento 100% FOSS | Todas as dependências OSI-approved |
+
+---
+
+## Estrutura do Repositório
 
 ```
 COGME/
-├── README.md
-├── LICENSE                          # MIT
-├── .github/
-│   ├── workflows/                   # CI/CD (GitHub Actions)
-│   ├── ISSUE_TEMPLATE/
-│   └── PULL_REQUEST_TEMPLATE.md
+├── .ai/                          # Contexto SDD (lido pela IA)
+│   ├── personas/                 # PM, Coder, Reviewer, Tester + active.md
+│   ├── specs/                    # Especificações imutáveis
+│   ├── handoffs/                 # Artefatos entre fases SDD
+│   └── workflows/                # Automação bash (sdd-cycle.sh)
+│
 ├── docs/
-│   ├── 00.TAP.md                    # Termo de Abertura v3
-│   ├── 01.plano-integracao.md
-│   ├── 02.plano-escopo.md
-│   ├── 03.plano-cronograma.md
-│   ├── 04.plano-custos.md
-│   ├── 05.plano-qualidade.md
-│   ├── 06.plano-recursos.md
-│   ├── 07.plano-comunicacoes.md
-│   ├── 08.plano-riscos.md
-│   └── 09.base-conhecimento/
-│       ├── ADRs/                    # ADR-001, 002, 003
-│       ├── prompts/                 # Catálogo SDD
-│       └── OKB.md                   # Operational Knowledge Base
+│   ├── planos/                   # 8 planos de gerenciamento
+│   │   ├── plano-integracao.md
+│   │   ├── plano-escopo.md
+│   │   ├── plano-cronograma.md
+│   │   ├── plano-custos.md
+│   │   ├── plano-qualidade.md
+│   │   ├── plano-recursos.md     ← M2
+│   │   ├── plano-comunicacoes.md ← M2
+│   │   └── plano-riscos.md       ← M2
+│   ├── decisoes/                 # ADRs 001–005
+│   ├── conhecimento/             # OKB, Glossário, Lições Aprendidas
+│   ├── metricas/                 # Baseline de fluxo (pós-calibração)
+│   ├── requisitos/               # REQ-01 a REQ-15
+│   ├── diagramas/                # SVGs canônicos por área
+│   │   ├── integracao/
+│   │   ├── escopo/
+│   │   ├── cronograma/
+│   │   ├── custos/
+│   │   ├── qualidade/
+│   │   └── eap/
+│   ├── dependencias/             # Registro de auditoria FOSS
+│   ├── tap/                      # TAP.md + TAP.docx
+│   └── archive/                  # Artefatos históricos (não canônicos)
+│
 ├── src/
-│   ├── backend/                     # FastAPI + SQLite
-│   ├── frontend/                    # HTML5 + CSS3 + JS
-│   └── shared/
-├── tests/                           # pytest (meta ≥ 80%)
-├── docker-compose.yml
-└── Makefile
+│   ├── backend/                  # FastAPI + SQLite
+│   │   ├── main.py
+│   │   ├── models/
+│   │   ├── routers/
+│   │   └── services/
+│   ├── frontend/                 # HTMX + Tailwind
+│   │   ├── templates/
+│   │   └── static/
+│   └── shared/                   # Schemas compartilhados
+│
+├── tests/
+│   ├── unit/
+│   └── integration/
+│
+├── .github/workflows/ci.yml      # Pipeline CI
+├── README.md
+├── LICENSE
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ---
 
-## 🚀 Como Executar Localmente
+## Como Executar
+
+### Pré-requisitos
+
+- Python 3.11+
+- Git
+
+### Setup
 
 ```bash
-git clone https://github.com/SEU_USUARIO/COGME.git
+# Clonar o repositório
+git clone https://github.com/Leonardo-Setti/COGME.git
 cd COGME
-make up          # docker-compose up --build
-# Acesse http://localhost:8000
+
+# Criar ambiente virtual
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
+
+# Instalar dependências
+pip install -r requirements.txt
 ```
 
-> ⚠️ Instruções completas após M2 (30/09/2026), quando ambiente e modelação estiverem concluídos.
+### Executar o Backend
+
+```bash
+uvicorn src.backend.main:app --reload --port 8000
+```
+
+### Executar Testes
+
+```bash
+pytest --cov=src --cov-report=term-missing --cov-fail-under=80
+```
+
+### Pipeline CI
+
+O pipeline roda automaticamente a cada push via GitHub Actions:
+
+```
+lint (flake8 + mypy) → testes (pytest + coverage ≥ 80%) → relatório
+```
 
 ---
 
-## 📊 Governança Mínima Viável (GMV)
+## Qualidade
 
-Todo artefato passa pelo teste: *"Se eu remover isto, o avaliador perceberá e penalizará?"*
-Se não → simplificar ou eliminar. Foco em **valor entregue**, não em burocracia.
+| Dimensão | Mecanismo | Meta |
+|---|---|---|
+| **Preventiva** | Code Review + SDD com IA auditável + Clean Code | Zero retrabalho |
+| **Detectiva** | Pipeline CI + pytest + coverage.py | Coverage ≥ 80% |
+| **Corretiva** | 12 ciclos PDCA + 3 diagramas Ishikawa 6M | Melhoria contínua |
 
-**Hierarquia de resolução de conflitos:**
+### Ferramentas da Qualidade (REQ-10)
 
-1. Valor entregue ao usuário final
-2. Ementa da disciplina + orientação do Prof. Nivaldo
-3. PMBOK 7ª (princípios + domínios)
-4. Manifesto Ágil + Kanban
-5. PMBOK 6ª (dicionário)
-6. Literatura técnica
+- **12 ciclos PDCA:** Um por fase da EAP (N1–N12)
+- **3 diagramas Ishikawa 6M:** Coverage < 80%, Defeitos Críticos em UAT, Cycle Time > 3 dias
+- **Retrospectivas quinzenais:** Pauta fixa (o que funcionou, o que melhorar, ações)
 
 ---
 
-## 📄 Licença
+## Premissas e Restrições
 
-Distribuído sob **MIT**. Veja [`LICENSE`](LICENSE).
+### Premissas (TAP §9)
+
+| # | Premissa |
+|---|---|
+| P1 | Governança híbrida: PMBOK 7ª + 6ª dicionário + Kanban |
+| P2 | Projeto 100% FOSS |
+| P3 | SDD com IA generativa autorizado, com rastreabilidade |
+| P4 | Código-fonte funcional é deliverable formal |
+| P5 | ≤ 20h/semana por membro |
+| P6 | Hardware local adequado |
+| P7 | Prof. Dr. Nivaldo Carleto = avaliador único nos marcos |
+| P8 | Aquisições e Partes Interessadas simplificadas |
+| P9 | Separação ontológica: TAP ≠ EAP ≠ PDCA |
+
+### Restrições (TAP §8 + §11)
+
+- MVP acadêmico — desenvolvimento do zero
+- Prazo letivo inegociável (2 bimestres)
+- **Orçamento zero** — proibição de ferramentas pagas
+- Equipe de 3 pessoas com múltiplos papéis
+- Stack 100% FOSS (OSI-approved)
+- Curso noturno — disponibilidade limitada
+
+---
+
+## Documentação
+
+| Documento | Localização |
+|---|---|
+| Termo de Abertura do Projeto (TAP) | [`docs/tap/TAP.md`](docs/tap/TAP.md) |
+| Plano de Integração | [`docs/planos/plano-integracao.md`](docs/planos/plano-integracao.md) |
+| Plano de Escopo | [`docs/planos/plano-escopo.md`](docs/planos/plano-escopo.md) |
+| Plano de Cronograma | [`docs/planos/plano-cronograma.md`](docs/planos/plano-cronograma.md) |
+| Plano de Custos | [`docs/planos/plano-custos.md`](docs/planos/plano-custos.md) |
+| Plano de Qualidade | [`docs/planos/plano-qualidade.md`](docs/planos/plano-qualidade.md) |
+| OKB (Base de Conhecimento) | [`docs/conhecimento/OKB.md`](docs/conhecimento/OKB.md) |
+| Glossário | [`docs/conhecimento/glossario.md`](docs/conhecimento/glossario.md) |
+| ADRs | [`docs/decisoes/`](docs/decisoes/) |
+| Diagramas | [`docs/diagramas/`](docs/diagramas/) |
+
+---
+
+## Licença
+
+Este projeto é licenciado sob a **MIT License** — veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+Todas as dependências são auditadas para conformidade FOSS. Consulte o [registro de dependências](docs/dependencias/registro.md) para a lista completa.
+
+---
+
+## Agradecimentos
+
+- **Fatec Taquaritinga** — Instituição de ensino
+- **Prof. Dr. Nivaldo Carleto** — Orientação e avaliação acadêmica
+- Comunidade FOSS — FastAPI, SQLite, WeasyPrint, HTMX, Tailwind CSS, llama.cpp, Qwen
 
 ---
 
 <div align="center">
-  <sub>COGME — Fatec Taquaritinga · ADS · Gerência de Projetos · 2026</sub><br>
-  <sub>Prof. Dr. Nivaldo Carleto · 100% FOSS · SDD com IA Auditável</sub>
-</div>
 
-# COGME — Conversor de Ganhos em Moeda Estrangeira
+**COGME** — Conversor de Ganhos em Moeda Estrangeira
 
-> **Status:** 🟡 Em construção — Macro-Fase 1 (Fundação) até 30/09/2026
-> **Licença:** MIT (100% FOSS)
-> **Metodologia:** PMBOK 7ª (governança) + Kanban via GitHub Projects (execução)
-> **Contexto acadêmico:** Fatec Taquaritinga — ADS (Análise e Desenvolvimento de Sistemas)
-> **Stakeholder-avaliador:** Prof. Dr. Nivaldo Carletto
+Fatec Taquaritinga · Análise e Desenvolvimento de Sistemas · Gerência de Projetos
 
----
+2026
 
-## 🎯 Objetivo
-
-O **COGME** é um aplicativo web full-stack que permite a profissionais autônomos e pequenas empresas converterem ganhos recebidos em moeda estrangeira (USD, EUR, GBP etc.) para BRL, gerando **comprovantes/invoices em PDF** com rastreabilidade cambial, histórico de operações e relatórios consolidados.
-
-O produto resolve uma dor real de freelancers brasileiros que recebem de clientes internacionais: a falta de uma ferramenta simples, offline-first e gratuita para documentar conversões com cotação auditável.
-
-### Objetivos de Negócio (PMBOK 7ª — Domínio de Entrega)
-
-- **O1.** Permitir registro de recebíveis em moeda estrangeira com cotação do dia (fonte: BCB/PTAX).
-- **O2.** Gerar invoices em PDF com histórico, taxa aplicada e valor líquido em BRL.
-- **O3.** Expor dashboard com resumo mensal/anual de ganhos convertidos.
-- **O4.** Garantir 100% de rastreabilidade entre cotação, transação e invoice gerada (ACID).
-
----
-
-## 📦 Escopo
-
-### MVP (Entrega Final — Nov/Dez 2026)
-
-| Épico                                 | Descrição                                                                        |
-| -------------------------------------- | ---------------------------------------------------------------------------------- |
-| **E1 — Gestão de Câmbio**     | Cadastro de transações em moeda estrangeira com cotação automática (API BCB). |
-| **E2 — Geração de Invoices**  | Emissão de PDFs numerados, com dados do pagador, recebedor, taxa e totais.        |
-| **E3 — Dashboard**              | Visão consolidada de ganhos por período, moeda e valor em BRL.                   |
-| **E4 — Autenticação Básica** | Login de usuário único (self-hosted) com sessão segura.                         |
-
-### Pós-Entrega (Melhoria Contínua — Domínio de Entrega)
-
-- 🔒 Segurança (OWASP ZAP)
-- ♿ Acessibilidade (WCAG 2.1 AA)
-- 📈 Observabilidade (Prometheus + Grafana + Loki)
-- 🌐 Internacionalização (i18n)
-
-> **Nota:** Itens de pós-entrega são tratados como backlog de melhoria contínua, não como escopo do MVP. Essa segregação é premissa pedagógica validada no TAP.
-
----
-
-## 🏗️ Arquitetura e Stack Tecnológica
-
-A stack é **100% FOSS** (premissa P2 do OKB). A seleção final de linguagens/frameworks será formalizada via **ADR-002** até 15/09/2026. Componentes já ancorados:
-
-| Camada           | Componente                            | Status        |
-| ---------------- | ------------------------------------- | ------------- |
-| Cache            | Redis                                 | ✅ Confirmado |
-| Geração de PDF | WeasyPrint                            | ✅ Confirmado |
-| Banco de dados   | A definir (PostgreSQL ou SQLite)      | ⏳ ADR-002    |
-| Backend          | A definir (FastAPI ou Django)         | ⏳ ADR-002    |
-| Frontend         | A definir (React ou Vue)              | ⏳ ADR-002    |
-| CI/CD            | GitHub Actions                        | ✅ Confirmado |
-| Deploy           | A definir (Railway / Render / Fly.io) | ⏳ ADR-002    |
-
-### Princípios Arquiteturais (PMBOK 7ª — Domínio de Abordagem)
-
-- **KISS** (P3): simplicidade como métrica de arquitetura.
-- **Adapter Pattern** para abstrair provedores de câmbio (fallback BCB caso API primária falhe).
-- **SDD com IA auditável** (P4): prompts de geração catalogados em `/docs/prompts/`.
-- **ACID + Clean Code** (P5): padrão inegociável em transações e código.
-
----
-
-## 🔄 Metodologia de Execução
-
-O projeto adota modelo híbrido:
-
-```
-PMBOK 7ª (governança primária)
-   │
-   ├── 12 Princípios + 8 Domínios de Desempenho
-   │
-   └── Kanban via GitHub Projects (execução)
-          │
-          ├── Fluxo contínuo (sem sprints fixas)
-          ├── WIP limit: 3 cards/pessoa
-          ├── Pull system
-          └── Métricas de fluxo (Cycle Time, Throughput)
-```
-
-### Mapeamento PMBOK 7ª ↔ Kanban (OKB v3.0 §4.3)
-
-| Domínio PMBOK 7ª | Ritual Kanban                               |
-| ------------------ | ------------------------------------------- |
-| Stakeholders       | Review assíncrono via Issues               |
-| Equipe             | Daily assíncrona (Discussion) + WIP limits |
-| Planejamento       | Refinement semanal do backlog               |
-| Trabalho           | Pull system + colunas Kanban                |
-| Entrega            | Deploy contínuo (CI/CD)                    |
-| Medição          | GitHub Insights (Cycle Time, Throughput)    |
-| Incerteza          | Labels`risk` / `blocked` + Risk Backlog |
-
----
-
-## 📁 Estrutura do Repositório - TBD
-
-```
-COGME/
-├── README.md                  ← você está aqui
-├── LICENSE                    ← MIT
-├── .github/
-│   ├── workflows/             ← CI/CD (GitHub Actions)
-│   ├── ISSUE_TEMPLATE/        ← templates de Issues
-│   └── PULL_REQUEST_TEMPLATE.md
-├── docs/                      ← documentação do projeto
-│   ├── 00.TAP.md
-│   ├── 01.plano-integracao.md
-│   ├── 02.plano-escopo.md
-│   ├── ...
-│   ├── 09.base-conhecimento/
-│   │   ├── ADRs/
-│   │   ├── prompts/           ← SDD com IA auditável
-│   │   └── runbooks/
-│   └── glossario.md
-├── src/                       ← código-fonte (MVP)
-│   ├── backend/
-│   ├── frontend/
-│   └── shared/
-├── tests/                     ← testes automatizados (meta ≥ 80% coverage)
-├── docker-compose.yml
-└── Makefile
-```
-
----
-
-## 🧭 Diretivas de Desenvolvimento
-
-### Definition of Ready (DoR)
-
-Um card só entra em *In Progress* quando:
-
-- [ ] Possui descrição clara e critérios de aceite
-- [ ] Está vinculado a um pacote da EAP (rastreabilidade)
-- [ ] Dependências técnicas estão resolvidas
-- [ ] Estimativa de esforço foi feita (T-shirt sizing)
-
-### Definition of Done (DoD)
-
-Um card só vai para *Done* quando:
-
-- [ ] Código implementado e revisado (pair review)
-- [ ] Testes automatizados escritos (TDD) e passando
-- [ ] Coverage ≥ 80% mantido
-- [ ] Documentação atualizada (se aplicável)
-- [ ] Commit segue Conventional Commits
-- [ ] CI/CD pipeline verde
-
-### Conventional Commits
-
-```
-<tipo>(<escopo>): <descrição>
-
-tipos: feat, fix, docs, style, refactor, test, chore, ci
-escopo: backend, frontend, docs, infra, eap
-```
-
-Exemplo: `feat(backend): adiciona adapter para API BCB de cotação`
-
-### Architecture Decision Records (ADRs)
-
-Toda decisão técnica que:
-
-- afete ≥ 2 fases da EAP,
-- envolva troca de tecnologia, ou
-- seria questionada em apresentação acadêmica
-
-...deve ser registrada em `/docs/09.base-conhecimento/ADRs/`. Decisões menores ficam apenas em commit messages.
-
-### Uso de LLM (SDD com IA Auditável)
-
-O uso de LLM é **irrestrito e autorizado** pela disciplina. Para rastreabilidade:
-
-- Prompts de geração são catalogados em `/docs/09.base-conhecimento/prompts/`
-- Commits gerados com auxílio de IA incluem co-autoria no trailer:
-  ```
-  Co-authored-by: QwenStudio <llm@cogme.local>
-  ```
-
----
-
-## 📊 Governança e Rastreabilidade
-
-O projeto segue hierarquia de resolução de conflitos (OKB v3.0 §4.1):
-
-1. **Valor entregue ao usuário final** (PMBOK 7ª — Domínio de Entrega)
-2. **Ementa da disciplina + orientação do Prof. Nivaldo**
-3. **PMBOK 7ª** (12 princípios + 8 domínios)
-4. **Manifesto Ágil + Kanban**
-5. **PMBOK 6ª** (dicionário complementar)
-6. **Literatura técnica**
-
-### Princípio de Governança Mínima Viável (GMV)
-
-Todo artefato de governança passa pelo teste: *"Se eu remover este artefato, o Prof. Nivaldo perceberá e penalizará?"*. Se a resposta for não, o artefato é candidato a simplificação ou eliminação.
-
-### Fontes Oficiais de Informação (SSOT)
-
-- **Kanban operacional:** [GitHub Projects — COGME](https://github.com/users/SEU_USUARIO/projects/NUMERO)
-- **Backlog de riscos:** Labels `risk` / `blocked` nas Issues
-- **Métricas de fluxo:** GitHub Insights
-- **Documentação formal:** pasta `/docs/`
-
----
-
-## 🚀 Como Executar Localmente
-
-> ⚠️ Instruções completas serão adicionadas após ADR-002 (definição da stack).
-
-```bash
-# Clone o repositório
-git clone https://github.com/leonardosetti/COGME.git
-cd COGME
-
-# Suba o ambiente (após definição da stack)
-make up
-
-# Acesse em http://localhost:8000
-```
-
----
-
-## 🤝 Contribuições
-
-Este é um projeto acadêmico com equipe de 3 pessoas. Contribuições externas são bem-vindas via Issues, mas mudanças de escopo devem passar pelo **CCB (Change Control Board)** — representado pelo Prof. Dr. Nivaldo Carletto.
-
-Para reportar bugs ou sugerir melhorias, abra uma Issue seguindo o template disponível.
-
----
-
-## 📚 Referências
-
-- PMI. *A Guide to the Project Management Body of Knowledge (PMBOK® Guide)* — 7th Edition, 2021.
-- PMI. *PMBOK® Guide* — 6th Edition, 2017 (dicionário complementar).
-- Atlassian. *Kanban: A very brief introduction*.
-- GitHub Docs. *About GitHub Projects*.
-- Fatec Taquaritinga. Ementa da disciplina de Gerência de Projetos — ADS.
-
----
-
-## 📄 Licença
-
-Distribuído sob licença **MIT**. Veja [`LICENSE`](LICENSE) para detalhes.
-
----
-
-<div align="center">
-  <sub>Desenvolvido com 💙 na Fatec Taquaritinga — ADS</sub><br>
-  <sub>Disciplina de Gerência de Projetos | Prof. Dr. Nivaldo Carletto | 2026</sub>
 </div>
