@@ -14,11 +14,11 @@ Auditoria cruzada da Seção 1 v1.0 contra a base documental vigente (TAP, OKB, 
 
 ### A.2 — Achados Externos (não bloqueiam esta seção; reportar ao GP)
 
-| #            | Achado                                                                                                                                                                                   | Artefato   | Severidade | Proposta                                                                                                                             |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| **C4** | TAP §3 (Métricas) define Cycle Time como*"do 'To Do' ao 'Done'"* — coluna **inexistente** no fluxo da ADR-002 (entrada = `Ready`); ADR-003 define *"In Progress → Done"* | TAP        | MÉDIA     | Plano adota a definição operacional da ADR-003. Propor correção cosmética no TAP: "To Do" → "In Progress" na próxima revisão |
-| **C5** | Glossário, linha "Stakeholder":*"Prof. Nivaldo (avaliador)"* — viola convenção de nome completo                                                                                    | Glossário | BAIXA      | Corrigir para "Prof. Dr. Nivaldo Carleto" na próxima revisão do Glossário                                                         |
-| **C6** | Matriz de rastreabilidade do TAP §5 mantém cabeçalho*"Fases EAP v2.0 Associadas"* — viola a regra de supressão de versões internas                                               | TAP        | BAIXA      | Find & replace: "EAP v2.0" → "EAP"                                                                                                  |
+| #            | Achado                                                                                                                                                                                | Artefato   | Severidade | Proposta                                                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **C4** | TAP §3 (Métricas) define Cycle Time como*"do 'To Do' ao 'Done'"* — coluna**inexistente** no fluxo da ADR-002 (entrada = `Ready`); ADR-003 define *"In Progress → Done"* | TAP        | MÉDIA     | Plano adota a definição operacional da ADR-003. Propor correção cosmética no TAP: "To Do" → "In Progress" na próxima revisão |
+| **C5** | Glossário, linha "Stakeholder":*"Prof. Nivaldo (avaliador)"* — viola convenção de nome completo                                                                                 | Glossário | BAIXA      | Corrigir para "Prof. Dr. Nivaldo Carleto" na próxima revisão do Glossário                                                         |
+| **C6** | Matriz de rastreabilidade do TAP §5 mantém cabeçalho*"Fases EAP v2.0 Associadas"* — viola a regra de supressão de versões internas                                              | TAP        | BAIXA      | Find & replace: "EAP v2.0" → "EAP"                                                                                                  |
 
 ### A.3 — Auditoria de Invasão de Escopo entre Áreas (implacável)
 
@@ -914,7 +914,7 @@ Procedo à aglutinação das duas redações (anterior + nova) aplicando as solu
 
 ---
 
-# REFINAMENTO FINAL — SEÇÃO 4: CUSTOS (v1.2)
+# PARTE B — Redação  — SEÇÃO 4: CUSTOS (v1.2)
 
 **Plano de Gerenciamento de Custos**
 
@@ -925,6 +925,8 @@ Procedo à aglutinação das duas redações (anterior + nova) aplicando as solu
 **Stakeholder-Avaliador:** Prof. Dr. Nivaldo Carleto — Fatec Taquaritinga / ADS
 
 ---
+
+# 4 CUSTOS
 
 ## 4.1 IDENTIFICAÇÃO E PROPÓSITO
 
@@ -1255,12 +1257,12 @@ Procedo à conversão dos diagramas Mermaid para SVG com estética profissional 
 
 ### Inconsistências Detectadas (Menores, Não-Bloqueantes)
 
-| # | Inconsistência | Localização | Severidade | Solução |
-|---|----------------|-------------|------------|---------|
-| I1 | PDCA-N10 menciona "scope creep > 15%" sem referenciar Escopo §2.7 | §5.6 PDCA-N10 | BAIXA | Adicionar referência cruzada |
-| I2 | PDCA-N7 menciona "Pipeline lento (> 5min)" sem referenciar REQ-11 | §5.6 PDCA-N7 | BAIXA | Adicionar referência cruzada |
-| I3 | Ishikawa-3 analisa Cycle Time (qualidade de processo), fronteira tênue com Cronograma §3.7 | §5.7 Ishikawa-3 | BAIXA | Reforçar delimitação na seção 5.8.2 |
-| I4 | Seção 5.8.2 menciona CFD e Cycle Time sem definir fonte canônica | §5.8.2 | BAIXA | Adicionar referência à Integração §1.6.1 |
+| #  | Inconsistência                                                                              | Localização    | Severidade | Solução                                     |
+| -- | -------------------------------------------------------------------------------------------- | ---------------- | ---------- | --------------------------------------------- |
+| I1 | PDCA-N10 menciona "scope creep > 15%" sem referenciar Escopo §2.7                           | §5.6 PDCA-N10   | BAIXA      | Adicionar referência cruzada                 |
+| I2 | PDCA-N7 menciona "Pipeline lento (> 5min)" sem referenciar REQ-11                            | §5.6 PDCA-N7    | BAIXA      | Adicionar referência cruzada                 |
+| I3 | Ishikawa-3 analisa Cycle Time (qualidade de processo), fronteira tênue com Cronograma §3.7 | §5.7 Ishikawa-3 | BAIXA      | Reforçar delimitação na seção 5.8.2      |
+| I4 | Seção 5.8.2 menciona CFD e Cycle Time sem definir fonte canônica                          | §5.8.2          | BAIXA      | Adicionar referência à Integração §1.6.1 |
 
 **Veredito:** Inconsistências menores, não-bloqueantes. A redação está estruturalmente consistente com TAP v3, OKB v3.0, Glossário v3.1, Integração v2.0, Escopo v1.1, Cronograma v1.2, Custos v1.2 e ADRs 001-004.
 
@@ -1268,7 +1270,7 @@ Procedo à conversão dos diagramas Mermaid para SVG com estética profissional 
 
 Gero os 4 SVGs com estética profissional para documento ABNT A4:
 
-## 5 QUALIDADE
+## PARTE B — Redação Integral  5 QUALIDADE
 
 **Plano de Gerenciamento da Qualidade**
 
@@ -1699,20 +1701,20 @@ A seção 5 utiliza a grafia "Prof. Dr. Nivaldo Carleto" conforme TAP v3. O Glos
 | 1.0     | 21/09/2026 | Emissão inicial: 12 PDCAs consolidados (N1-N12); 3 diagramas Ishikawa 6M; métricas de qualidade; FIG-1, FIG-3, FIG-4, FIG-5; exclusão de FIG-2 (GMV); NC-Q1 a NC-Q4 (freeze do TAP); delimitação de fronteiras com Custos §4.5 e Cronograma §3.7                                                                                                                                                                                                   | Leonardo D. S. Setti |
 | 1.1     | 21/09/2026 | Refinamento pós-review: (I1) PDCA-N10 com referência a Escopo §2.7 e Integração §1.9; (I2) PDCA-N7 com referência a REQ-11; (I3) nota sobre qualidade de processo vs. produto na introdução §5.7; (I4) referência canônica em §5.8.2; (I5) especificação "SonarQube Free Tier" em §5.3; (I6) nota sobre mypy como ferramenta complementar em §5.4.1; (E1) NC-Q5 sobre grafia do stakeholder; 4 SVGs gerados (FIG-1, FIG-3, FIG-4, FIG-5) | Leonardo D. S. Setti |
 
-
 ## REGISTRO DE DIAGRAMAS E VERIFICAÇÃO FINAL
 
 ### Diagramas Obrigatórios e Exclusões
 
-| ID | Seção | Diagrama | Necessidade | Status |
-|----|-------|----------|-------------|--------|
-| FIG-1 | 5.2 | Fluxo de Garantia da Qualidade | Alta — materializa gates de qualidade sequenciais | ✅ SVG gerado |
-| FIG-2 | 5.3 | Dashboard de Métricas | **Excluída** — GitHub Insights fornece nativamente; GMV | ❌ Excluída |
-| FIG-3 | 5.7 | Ishikawa: Coverage < 80% | Alta — análise de causa-raiz para REQ-08 | ✅ SVG gerado |
-| FIG-4 | 5.7 | Ishikawa: Defeitos Críticos UAT | Alta — análise de causa-raiz para REQ-09 | ✅ SVG gerado |
-| FIG-5 | 5.7 | Ishikawa: Cycle Time > 3 dias | Alta — análise de causa-raiz para melhoria de processo | ✅ SVG gerado |
+| ID    | Seção | Diagrama                         | Necessidade                                                     | Status        |
+| ----- | ------- | -------------------------------- | --------------------------------------------------------------- | ------------- |
+| FIG-1 | 5.2     | Fluxo de Garantia da Qualidade   | Alta — materializa gates de qualidade sequenciais              | ✅ SVG gerado |
+| FIG-2 | 5.3     | Dashboard de Métricas           | **Excluída** — GitHub Insights fornece nativamente; GMV | ❌ Excluída  |
+| FIG-3 | 5.7     | Ishikawa: Coverage < 80%         | Alta — análise de causa-raiz para REQ-08                      | ✅ SVG gerado |
+| FIG-4 | 5.7     | Ishikawa: Defeitos Críticos UAT | Alta — análise de causa-raiz para REQ-09                      | ✅ SVG gerado |
+| FIG-5 | 5.7     | Ishikawa: Cycle Time > 3 dias    | Alta — análise de causa-raiz para melhoria de processo        | ✅ SVG gerado |
 
 **Diagramas deliberadamente EXCLUÍDOS (anti-invasão de escopo + GMV):**
+
 - Gráfico de controle estatístico (inaplicável — projeto acadêmico com n pequeno)
 - Matriz de rastreabilidade completa (pertence ao Escopo; aqui apenas referenciada)
 - Histograma de defeitos por módulo (GMV — nativo do GitHub Issues)
@@ -1720,35 +1722,35 @@ A seção 5 utiliza a grafia "Prof. Dr. Nivaldo Carleto" conforme TAP v3. O Glos
 
 ### Checklist de Validação (v1.1)
 
-| Item | Status |
-|------|--------|
-| 12 PDCAs consolidados (N1-N12), sem TAP (Premissa P9) | ✅ OK |
-| PDCAs objetivos (máx. 6 linhas cada), sem bloat | ✅ OK |
-| 3 diagramas Ishikawa 6M (coverage, UAT, cycle time) | ✅ OK |
-| REQ-08, REQ-09, REQ-10 rastreáveis | ✅ OK |
-| Meta de coverage ≥ 80% declarada e operacionalizada | ✅ OK |
-| Fronteira com Custos §4.5 (auditoria FOSS) delimitada | ✅ OK |
-| Fronteira com Cronograma §3.7 (CFD) delimitada | ✅ OK |
-| Fronteira com Escopo §2.6 (DoR/DoD) delimitada | ✅ OK |
-| FIG-1 (fluxo de qualidade) especificada | ✅ SVG gerado |
-| FIG-2 excluída com justificativa GMV | ✅ OK |
-| NC-Q1 a NC-Q5 (freeze do TAP, EAP 12 fases, grafia stakeholder) registradas | ✅ OK |
-| "Prof. Dr. Nivaldo Carleto" por extenso | ✅ OK |
-| Zero invasão de escopo entre áreas | ✅ OK |
-| Extensão dentro do limite GMV (≈ 4 páginas) | ✅ OK |
-| ADR-003 referenciada (EVM LEGADO) | ✅ OK |
-| ADR-004 referenciada (tasklists) | ✅ OK |
-| Diretriz D3 (freeze do TAP) formalizada em NC-Q1 | ✅ OK |
-| Inconsistências I1-I6 sanadas | ✅ OK |
-| 4 SVGs gerados (FIG-1, FIG-3, FIG-4, FIG-5) | ✅ OK |
+| Item                                                                        | Status        |
+| --------------------------------------------------------------------------- | ------------- |
+| 12 PDCAs consolidados (N1-N12), sem TAP (Premissa P9)                       | ✅ OK         |
+| PDCAs objetivos (máx. 6 linhas cada), sem bloat                            | ✅ OK         |
+| 3 diagramas Ishikawa 6M (coverage, UAT, cycle time)                         | ✅ OK         |
+| REQ-08, REQ-09, REQ-10 rastreáveis                                         | ✅ OK         |
+| Meta de coverage ≥ 80% declarada e operacionalizada                        | ✅ OK         |
+| Fronteira com Custos §4.5 (auditoria FOSS) delimitada                      | ✅ OK         |
+| Fronteira com Cronograma §3.7 (CFD) delimitada                             | ✅ OK         |
+| Fronteira com Escopo §2.6 (DoR/DoD) delimitada                             | ✅ OK         |
+| FIG-1 (fluxo de qualidade) especificada                                     | ✅ SVG gerado |
+| FIG-2 excluída com justificativa GMV                                       | ✅ OK         |
+| NC-Q1 a NC-Q5 (freeze do TAP, EAP 12 fases, grafia stakeholder) registradas | ✅ OK         |
+| "Prof. Dr. Nivaldo Carleto" por extenso                                     | ✅ OK         |
+| Zero invasão de escopo entre áreas                                        | ✅ OK         |
+| Extensão dentro do limite GMV (≈ 4 páginas)                              | ✅ OK         |
+| ADR-003 referenciada (EVM LEGADO)                                           | ✅ OK         |
+| ADR-004 referenciada (tasklists)                                            | ✅ OK         |
+| Diretriz D3 (freeze do TAP) formalizada em NC-Q1                            | ✅ OK         |
+| Inconsistências I1-I6 sanadas                                              | ✅ OK         |
+| 4 SVGs gerados (FIG-1, FIG-3, FIG-4, FIG-5)                                 | ✅ OK         |
 
 **Status:** v1.1 emitida — pronta para submissão no M1 (22/09/2026).
 
 ---
 
-**GP Sênior PMBOK 7ª / PMO — Co-Autor Crítico**  
-Projeto COGME | Fatec Taquaritinga | 21/09/2026  
-**Falta 1 dia útil para o Marco M1 (22/09/2026).**  
+**GP Sênior PMBOK 7ª / PMO — Co-Autor Crítico**
+Projeto COGME | Fatec Taquaritinga | 21/09/2026
+**Falta 1 dia útil para o Marco M1 (22/09/2026).**
 Próxima área sugerida: **6 Recursos** (M2) ou **7 Comunicações** (M2).
 
---- 
+---
