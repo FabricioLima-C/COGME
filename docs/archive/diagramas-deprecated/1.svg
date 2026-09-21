@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 760" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="1280" height="760" fill="#FFFFFF"/>
+  <text x="640" y="42" text-anchor="middle" font-size="23" font-weight="bold" fill="#111111">Diagrama de Ishikawa 6M — Coverage Insuficiente (&lt; 80%)</text>
+
+  <!-- espinha + seta -->
+  <line x1="60" y1="400" x2="998" y2="400" stroke="#111111" stroke-width="4"/>
+  <polygon points="998,391 1012,400 998,409" fill="#111111"/>
+  <!-- caixa do efeito -->
+  <rect x="1012" y="370" width="212" height="60" rx="4" fill="#C0392B"/>
+  <text x="1118" y="396" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">Coverage</text>
+  <text x="1118" y="414" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">&lt; 80%</text>
+
+  <!-- costelas superiores -->
+  <line x1="300" y1="400" x2="170" y2="170" stroke="#1F3A5F" stroke-width="3"/>
+  <line x1="600" y1="400" x2="470" y2="170" stroke="#1F3A5F" stroke-width="3"/>
+  <line x1="880" y1="400" x2="750" y2="170" stroke="#1F3A5F" stroke-width="3"/>
+  <text x="170" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MÉTODO</text>
+  <text x="470" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MÃO DE OBRA</text>
+  <text x="750" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MÁQUINA</text>
+
+  <!-- MÉTODO (sup C1) -->
+  <line x1="120.6" y1="210" x2="192.6" y2="210" stroke="#555555" stroke-width="1.2"/>
+  <text x="116.6" y="203" text-anchor="end" font-size="12" fill="#222222">Testes não escritos<tspan x="116.6" dy="13">antes do código (sem TDD)</tspan></text>
+  <line x1="150" y1="262" x2="222" y2="262" stroke="#555555" stroke-width="1.2"/>
+  <text x="146" y="266" text-anchor="end" font-size="12" fill="#222222">Complexidade ciclomática alta</text>
+  <line x1="179.4" y1="314" x2="251.4" y2="314" stroke="#555555" stroke-width="1.2"/>
+  <text x="175.4" y="307" text-anchor="end" font-size="12" fill="#222222">Dependências externas<tspan x="175.4" dy="13">difíceis de mockar</tspan></text>
+
+  <!-- MÃO DE OBRA (sup C2) -->
+  <line x1="420.6" y1="210" x2="492.6" y2="210" stroke="#555555" stroke-width="1.2"/>
+  <text x="416.6" y="203" text-anchor="end" font-size="12" fill="#222222">Falta de experiência<tspan x="416.6" dy="13">com pytest</tspan></text>
+  <line x1="450" y1="262" x2="522" y2="262" stroke="#555555" stroke-width="1.2"/>
+  <text x="446" y="255" text-anchor="end" font-size="12" fill="#222222">Sobrecarga da equipe<tspan x="446" dy="13">(burnout)</tspan></text>
+  <line x1="479.4" y1="314" x2="551.4" y2="314" stroke="#555555" stroke-width="1.2"/>
+  <text x="475.4" y="318" text-anchor="end" font-size="12" fill="#222222">Revisão de código superficial</text>
+
+  <!-- MÁQUINA (sup C3) -->
+  <line x1="700.6" y1="210" x2="772.6" y2="210" stroke="#555555" stroke-width="1.2"/>
+  <text x="696.6" y="203" text-anchor="end" font-size="12" fill="#222222">Hardware limitado para<tspan x="696.6" dy="13">testes pesados</tspan></text>
+  <line x1="730" y1="262" x2="802" y2="262" stroke="#555555" stroke-width="1.2"/>
+  <text x="726" y="255" text-anchor="end" font-size="12" fill="#222222">CI lento desencoraja<tspan x="726" dy="13">execução local</tspan></text>
+
+  <!-- costelas inferiores -->
+  <line x1="300" y1="400" x2="170" y2="630" stroke="#1F3A5F" stroke-width="3"/>
+  <line x1="600" y1="400" x2="470" y2="630" stroke="#1F3A5F" stroke-width="3"/>
+  <line x1="880" y1="400" x2="750" y2="630" stroke="#1F3A5F" stroke-width="3"/>
+  <text x="170" y="662" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MATERIAL</text>
+  <text x="470" y="662" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MEDIDA</text>
+  <text x="750" y="662" text-anchor="middle" font-size="16" font-weight="bold" fill="#1F3A5F">MEIO AMBIENTE</text>
+
+  <!-- MATERIAL (inf C1) -->
+  <line x1="187.4" y1="486" x2="251.4" y2="486" stroke="#555555" stroke-width="1.2"/>
+  <text x="183.4" y="479" text-anchor="end" font-size="12" fill="#222222">Código legado (não<tspan x="183.4" dy="13">desenvolvido do zero)</tspan></text>
+  <line x1="157.9" y1="538" x2="221.9" y2="538" stroke="#555555" stroke-width="1.2"/>
+  <text x="153.9" y="542" text-anchor="end" font-size="12" fill="#222222">APIs externas sem sandbox de teste</text>
+
+  <!-- MEDIDA (inf C2) -->
+  <line x1="487.4" y1="486" x2="551.4" y2="486" stroke="#555555" stroke-width="1.2"/>
+  <text x="483.4" y="479" text-anchor="end" font-size="12" fill="#222222">Meta de 80% não<tspan x="483.4" dy="13">comunicada claramente</tspan></text>
+  <line x1="457.9" y1="538" x2="521.9" y2="538" stroke="#555555" stroke-width="1.2"/>
+  <text x="453.9" y="531" text-anchor="end" font-size="12" fill="#222222">Coverage não é gate<tspan x="453.9" dy="13">obrigatório no CI</tspan></text>
+
+  <!-- MEIO AMBIENTE (inf C3) -->
+  <line x1="767.4" y1="486" x2="831.4" y2="486" stroke="#555555" stroke-width="1.2"/>
+  <text x="763.4" y="490" text-anchor="end" font-size="12" fill="#222222">Pressão de prazo (M3, M4)</text>
+  <line x1="737.9" y1="538" x2="801.9" y2="538" stroke="#555555" stroke-width="1.2"/>
+  <text x="733.9" y="531" text-anchor="end" font-size="12" fill="#222222">Curso noturno limita<tspan x="733.9" dy="13">tempo de estudo</tspan></text>
+</svg>
